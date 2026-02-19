@@ -4,1358 +4,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions in Software and Hardware - Soluciones Tecnológicas Integrales</title>
-    <meta name="description"
-        content="Soluciones integrales en software y hardware. Desarrollo de software a medida, páginas web profesionales y servicios de mantenimiento técnico.">
-    <meta name="keywords" content="desarrollo software, hardware, consultoría tecnológica, reparación computadoras">
+    <title>Solutions in Software and Hardware — Soluciones Tecnológicas Integrales</title>
+    <meta name="description" content="Soluciones integrales en software y hardware. Desarrollo de software a medida, páginas web profesionales y servicios de mantenimiento técnico.">
+    <meta name="keywords" content="desarrollo software, hardware, consultoría tecnológica, reparación computadoras, Joan Miam">
     <meta name="author" content="Solutions in Software and Hardware">
-    <meta name="theme-color" content="#0F3460">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-dark: #0F3460;
-            --primary-light: #16213E;
-            --accent: #0F3460;
-            --text-dark: #1A1A1A;
-            --text-light: #666666;
-            --bg-light: #F8F9FA;
-            --white: #FFFFFF;
-            --border: #E0E0E0;
-            --success: #27AE60;
-            --error: #E74C3C;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* ==================== HEADER & NAVIGATION ==================== */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: slideDown 0.5s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            transition: color 0.3s ease;
-        }
-
-        .logo:hover {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--primary-dark);
-            transition: 0.3s ease;
-        }
-
-        /* ==================== HERO SECTION ==================== */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            padding: 120px 2rem 100px;
-            text-align: center;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 500px;
-            height: 500px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            transform: translate(100px, -100px);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .hero-tagline {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 300;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--white);
-            color: var(--primary-dark);
-            padding: 14px 40px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        /* ==================== ABOUT SECTION ==================== */
-        .about {
-            padding: 100px 2rem;
-            background: var(--bg-light);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .about-content {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            line-height: 1.8;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-        }
-
-        .founder-attribution {
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.05) 0%, rgba(22, 33, 62, 0.05) 100%);
-            border-left: 4px solid var(--primary-dark);
-            border-radius: 6px;
-            font-style: italic;
-            color: var(--text-dark);
-            margin-top: 2rem;
-        }
-
-        .founder-attribution strong {
-            display: block;
-            font-style: normal;
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        /* ==================== SERVICES SECTION ==================== */
-        .services {
-            padding: 100px 2rem;
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-category {
-            margin-bottom: 3rem;
-        }
-
-        .service-category h3 {
-            font-size: 1.8rem;
-            color: var(--primary-dark);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .service-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(15, 52, 96, 0.12);
-            border-color: var(--primary-dark);
-        }
-
-        .service-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .service-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .service-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .service-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .service-card:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* ==================== WHY CHOOSE US ==================== */
-        .why-us {
-            padding: 100px 2rem;
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-            color: var(--white);
-        }
-
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 2rem;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .why-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .why-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .why-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .why-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .why-card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .why-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .why-card p {
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.6;
-        }
-
-        /* ==================== PORTFOLIO SECTION ==================== */
-        .portfolio {
-            padding: 100px 2rem;
-            background: var(--bg-light);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .portfolio-item {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .portfolio-item:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .portfolio-item:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .portfolio-item:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .portfolio-item:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(15, 52, 96, 0.15);
-        }
-
-        .portfolio-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #999;
-        }
-
-        .portfolio-content {
-            padding: 1.5rem;
-        }
-
-        .portfolio-content h4 {
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .portfolio-category {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        /* ==================== CONTACT FORM ==================== */
-        .contact {
-            padding: 100px 2rem;
-            background: var(--white);
-        }
-
-        .contact-wrapper {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: var(--white);
-            color: var(--text-dark);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-dark);
-            box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-group.error input,
-        .form-group.error select,
-        .form-group.error textarea {
-            border-color: var(--error);
-            background: rgba(231, 76, 60, 0.05);
-        }
-
-        .error-message {
-            color: var(--error);
-            font-size: 0.85rem;
-            margin-top: 0.3rem;
-            display: none;
-        }
-
-        .form-group.error .error-message {
-            display: block;
-        }
-
-        .submit-btn {
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 14px 40px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: var(--primary-light);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(15, 52, 96, 0.3);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .message-alert {
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-weight: 500;
-            display: none;
-        }
-
-        .message-alert.success {
-            background: rgba(39, 174, 96, 0.1);
-            color: var(--success);
-            display: block;
-        }
-
-        .message-alert.error {
-            background: rgba(231, 76, 60, 0.1);
-            color: var(--error);
-            display: block;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 3rem 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--white);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-start;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: var(--white);
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .social-icon:hover {
-            background: var(--white);
-            color: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
-
-        /* ==================== RESPONSIVE DESIGN ==================== */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                padding: 1rem;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                gap: 0;
-            }
-
-            .nav-links.active a {
-                padding: 1rem;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .hero {
-                min-height: 500px;
-                padding: 80px 1rem 60px;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-tagline {
-                font-size: 1.1rem;
-            }
-
-            .hero::before {
-                width: 300px;
-                height: 300px;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .social-icons {
-                justify-content: center;
-            }
-
-            nav {
-                padding: 1rem;
-            }
-
-            .about-content {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-tagline {
-                font-size: 1rem;
-            }
-
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 0.95rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .services-grid {
-                gap: 1rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
-            .about-content {
-                padding: 1rem;
-            }
-
-            nav {
-                padding: 0.8rem;
-            }
-
-            .logo {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* ==================== LOADING & ANIMATIONS ==================== */
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* ==================== SCROLLBAR STYLING ==================== */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-light);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-dark);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-light);
-        }
-
-        /* ==================== ACCESSIBILITY ==================== */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-dark: #E0E0E0;
-                --text-light: #B0B0B0;
-                --bg-light: #1A1A1A;
-                --white: #121212;
-                --border: #333333;
-            }
-
-            body {
-                background-color: #0A0A0A;
-            }
-
-            header {
-                background: #1A1A1A;
-            }
-
-            .about-content {
-                background: #1A1A1A;
-            }
-
-            .service-card {
-                background: #1A1A1A;
-            }
-
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                background: #1A1A1A;
-                color: var(--text-dark);
-            }
-        }
-    </style>
+    <meta name="theme-color" content="#0A1628">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solutions in Software and Hardware">
+    <meta property="og:description" content="Soluciones tecnológicas integrales - Desarrollo de software y servicios de hardware profesionales">
+    <meta property="og:url" content="https://joanmiam.github.io/solutions-software-hardware/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- ==================== HEADER ==================== -->
-    <header>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">SSH</div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Header -->
+    <header id="header">
         <nav>
-            <a href="#home" class="logo">SSH</a>
-            <div class="menu-toggle" aria-label="Abrir menú">
+            <a href="#home" class="logo">SSH<span>.dev</span></a>
+            <div class="hamburger" id="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#about">Nosotros</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#contact" class="nav-cta">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- Hero -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
         <div class="hero-content">
-            <h1>Solutions in Software and Hardware</h1>
-            <p class="hero-tagline">Soluciones Tecnológicas Integrales para tu Negocio</p>
-            <button class="cta-button"
-                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                Solicitar Consultoría
-            </button>
-        </div>
-    </section>
-
-    <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sobre Nosotros</h2>
-                <p>Profesionales dedicados a impulsar tu negocio con tecnología de vanguardia</p>
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Soluciones Tecnológicas de Próxima Generación
             </div>
-            <div class="about-content">
-                <p class="about-text">
-                    En <strong>Solutions in Software and Hardware</strong>, somos un equipo multidisciplinario
-                    comprometido con entregar soluciones tecnológicas de calidad superior. Contamos con especialistas en
-                    hardware y ingenieros de software con amplia experiencia en la industria.
-                </p>
-                <p class="about-text">
-                    Nos enfocamos en entender las necesidades específicas de cada cliente para diseñar e implementar
-                    soluciones personalizadas que no solo resuelven problemas, sino que impactan positivamente en el
-                    crecimiento y eficiencia de sus operaciones.
-                </p>
-                <p class="about-text">
-                    Nuestro compromiso es simple: profesionalismo, confiabilidad y excelencia en cada proyecto que
-                    emprendemos.
-                </p>
-                <div class="founder-attribution">
-                    <strong>Fundado por Joan Miam — Ingeniero de Software</strong>
-                    <p>Con visión de integrar soluciones completas en software y hardware para empresas que buscan
-                        transformación digital.</p>
+            <h1>Solutions in<br><span class="gradient-text">Software &amp; Hardware</span></h1>
+            <p class="hero-tagline">Ingeniería integral que transforma ideas en infraestructura digital sólida — desde el código hasta el circuito.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Solicitar Consultoría →</a>
+                <a href="#services" class="btn-secondary">Explorar Servicios</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="number" data-target="50">0</div>
+                    <div class="label">Proyectos Entregados</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" data-target="30">0</div>
+                    <div class="label">Clientes Satisfechos</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" data-target="99">0</div>
+                    <div class="label">% Uptime Garantizado</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SERVICES SECTION ==================== -->
-    <section id="services" class="services">
+    <!-- About -->
+    <div class="section-divider"></div>
+    <section id="about" class="section about">
         <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones completas en software y hardware para impulsar tu negocio</p>
-            </div>
-
-            <!-- Software Solutions -->
-            <div class="service-category">
-                <h3>💻 Software Solutions</h3>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">⚙️</div>
-                        <h4>Desarrollo a Medida</h4>
-                        <p>Desarrollo de software personalizado desde cero, adaptado a tus necesidades específicas y
-                            arquitectura escalable.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h4>Páginas Web Profesionales</h4>
-                        <p>Diseño y desarrollo de sitios web modernos, responsive y optimizados para conversiones y SEO.
-                        </p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🚀</div>
-                        <h4>Soluciones Digitales</h4>
-                        <p>Plataformas digitales completas para transformar tu modelo de negocio y mejorar experiencia
-                            de cliente.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🤖</div>
-                        <h4>Automatización de Procesos</h4>
-                        <p>Implementación de sistemas de automatización que aumentan productividad y reducen costos
-                            operacionales.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h4>Consultoría Tecnológica</h4>
-                        <p>Asesoría profesional en arquitectura de software, mejores prácticas y estrategia tecnológica
-                            empresarial.</p>
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-card-stack">
+                        <div class="about-floating-card afc-1">
+                            <div class="afc-icon">👨‍💻</div>
+                            <div class="afc-title">Ingenieros de Software</div>
+                            <div class="afc-desc">Arquitectura, desarrollo y despliegue de soluciones escalables.</div>
+                        </div>
+                        <div class="about-floating-card afc-2">
+                            <div class="afc-icon">��</div>
+                            <div class="afc-title">Especialistas en Hardware</div>
+                            <div class="afc-desc">Diagnóstico, reparación y configuración de equipos profesionales.</div>
+                        </div>
+                        <div class="about-floating-card afc-3">
+                            <div class="afc-icon">🚀</div>
+                            <div class="afc-title">Innovación Constante</div>
+                            <div class="afc-desc">Aplicamos tecnología de vanguardia en cada proyecto que emprendemos.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Hardware Solutions -->
-            <div class="service-category">
-                <h3>🖥️ Hardware Solutions</h3>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🔧</div>
-                        <h4>Reparación de Computadoras</h4>
-                        <p>Diagnóstico y reparación profesional de equipos, desde motherboard hasta sistemas operativos.
-                        </p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🛡️</div>
-                        <h4>Mantenimiento Preventivo</h4>
-                        <p>Mantenimiento regular para prolongar vida útil de equipos, optimizar rendimiento y prevenir
-                            fallas.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📹</div>
-                        <h4>Instalación de Cámaras</h4>
-                        <p>Sistemas de seguridad con cámaras IP de alta definición, almacenamiento en nube y monitoreo
-                            remoto.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎯</div>
-                        <h4>Soporte Técnico Presencial</h4>
-                        <p>Equipo técnico disponible para atender problemáticas en tu lugar de trabajo con respuesta
-                            rápida y profesional.</p>
+                <div class="about-text reveal reveal-delay-2">
+                    <div class="section-label">Sobre Nosotros</div>
+                    <h2 class="section-title">Un equipo completo para<br>soluciones completas</h2>
+                    <p>En <strong>Solutions in Software and Hardware</strong>, integramos un equipo multidisciplinario de <strong>ingenieros de software</strong> y <strong>especialistas en hardware</strong> con una misión clara: entregar soluciones tecnológicas de calidad superior que impulsen el crecimiento de tu negocio.</p>
+                    <p>Nos enfocamos en entender las necesidades específicas de cada cliente para diseñar e implementar soluciones personalizadas que generan impacto real en la eficiencia y competitividad de sus operaciones.</p>
+                    <div class="founder-card">
+                        <div class="founder-name">Fundado por Joan Miam</div>
+                        <div class="founder-role">Ingeniero de Software</div>
+                        <div class="founder-quote">"Nuestra visión es integrar soluciones completas en software y hardware para empresas que buscan verdadera transformación digital."</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== WHY CHOOSE US ==================== -->
-    <section class="why-us">
+    <!-- Services -->
+    <div class="section-divider"></div>
+    <section id="services" class="section services-bg">
         <div class="container">
-            <div class="section-header">
-                <h2 style="color: var(--white);">¿Por Qué Elegirnos?</h2>
-                <p style="color: rgba(255, 255, 255, 0.85);">Características que nos diferencian en la industria</p>
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content:center;">Nuestros Servicios</div>
+                <h2 class="section-title">Soluciones de extremo a extremo</h2>
+                <p class="section-subtitle">Desde la línea de código hasta la infraestructura física — cubrimos cada aspecto de tu ecosistema tecnológico.</p>
             </div>
-            <div class="why-us-grid">
-                <div class="why-card">
-                    <div class="why-card-icon">✓</div>
+            <div class="services-tabs reveal">
+                <button class="tab-btn active" data-tab="software">💻 Software</button>
+                <button class="tab-btn" data-tab="hardware">🖥️ Hardware</button>
+            </div>
+            <div class="services-panel active" id="panel-software">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon-wrap">⚙️</div>
+                    <h4>Desarrollo a Medida</h4>
+                    <p>Software personalizado desde cero con arquitectura escalable, adaptado exactamente a tus necesidades de negocio.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon-wrap">🌐</div>
+                    <h4>Páginas Web Profesionales</h4>
+                    <p>Sitios web modernos, responsive y optimizados para conversiones, SEO y experiencia de usuario premium.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon-wrap">🚀</div>
+                    <h4>Soluciones Digitales</h4>
+                    <p>Plataformas digitales completas para transformar tu modelo de negocio y conectar con tus clientes.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon-wrap">🤖</div>
+                    <h4>Automatización</h4>
+                    <p>Sistemas de automatización inteligentes que aumentan productividad y reducen costos operacionales hasta un 70%.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-5">
+                    <div class="service-icon-wrap">📊</div>
+                    <h4>Consultoría Técnica</h4>
+                    <p>Asesoría profesional en arquitectura de software, mejores prácticas y estrategia tecnológica empresarial.</p>
+                </div>
+            </div>
+            <div class="services-panel" id="panel-hardware">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon-wrap">🔧</div>
+                    <h4>Reparación de Computadoras</h4>
+                    <p>Diagnóstico y reparación profesional de equipos — desde motherboard hasta restauración de sistemas operativos.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon-wrap">🛡️</div>
+                    <h4>Mantenimiento Preventivo</h4>
+                    <p>Mantenimiento regular para prolongar vida útil de equipos, optimizar rendimiento y prevenir fallas críticas.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon-wrap">📹</div>
+                    <h4>Cámaras de Seguridad</h4>
+                    <p>Instalación de sistemas de vigilancia con cámaras IP de alta definición, NVR y monitoreo remoto 24/7.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon-wrap">🎯</div>
+                    <h4>Soporte Técnico Presencial</h4>
+                    <p>Equipo técnico en sitio para resolver problemáticas de forma rápida, profesional y con garantía de servicio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <div class="section-divider"></div>
+    <section class="section why-us-bg">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content:center;">Ventajas</div>
+                <h2 class="section-title">¿Por qué elegirnos?</h2>
+                <p class="section-subtitle">Características que nos diferencian en la industria tecnológica.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-icon">✦</div>
                     <h4>Profesionalismo</h4>
-                    <p>Equipo certificado con experiencia demostrada en soluciones tecnológicas complejas.</p>
+                    <p>Equipo certificado con experiencia demostrada en soluciones tecnológicas complejas de alto rendimiento.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-card-icon">⚡</div>
-                    <h4>Soluciones Personalizadas</h4>
-                    <p>No usamos templates genéricos. Cada solución está diseñada específicamente para tu negocio.</p>
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-icon">⚡</div>
+                    <h4>100% Personalizado</h4>
+                    <p>No usamos templates genéricos. Cada solución es diseñada exclusivamente para tu negocio y objetivos.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-card-icon">📞</div>
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-icon">📞</div>
                     <h4>Atención Directa</h4>
-                    <p>Contacto fluido con profesionales capacitados, sin intermediarios ni consultores genéricos.</p>
+                    <p>Comunicación directa con el equipo técnico. Sin intermediarios, sin consultores genéricos. Solo resultados.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-card-icon">🎯</div>
+                <div class="why-card reveal reveal-delay-4">
+                    <div class="why-icon">🎯</div>
                     <h4>Tecnología Actual</h4>
-                    <p>Usamos las herramientas y frameworks más modernos y confiables de la industria.</p>
+                    <p>Stack tecnológico moderno y herramientas de última generación para soluciones robustas y escalables.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== PORTFOLIO SECTION ==================== -->
-    <section id="portfolio" class="portfolio">
+    <!-- Portfolio -->
+    <div class="section-divider"></div>
+    <section id="portfolio" class="section portfolio-bg">
         <div class="container">
-            <div class="section-header">
-                <h2>Nuestro Portafolio</h2>
-                <p>Proyectos representativos de nuestro trabajo</p>
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content:center;">Portafolio</div>
+                <h2 class="section-title">Proyectos destacados</h2>
+                <p class="section-subtitle">Una muestra del trabajo que realizamos para nuestros clientes.</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">📱</div>
-                    <div class="portfolio-content">
-                        <h4>Aplicación Mobile</h4>
-                        <p class="portfolio-category">Desarrollo iOS & Android</p>
-                        <p>Plataforma de gestión de inventario en tiempo real para empresa de retail.</p>
+                <div class="portfolio-card reveal reveal-delay-1">
+                    <div class="portfolio-visual pv-1">
+                        <div class="bg-pattern"></div>
+                        <span class="icon-big">📱</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Mobile App</span>
+                        <h4>Aplicación de Inventario</h4>
+                        <p>Plataforma de gestión de inventario en tiempo real para empresa de retail con sincronización multi-sede.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">🌐</div>
-                    <div class="portfolio-content">
-                        <h4>Sitio Web Corporativo</h4>
-                        <p class="portfolio-category">Web Development</p>
-                        <p>Portal empresarial con integración de sistemas CRM y automatización de procesos.</p>
+                <div class="portfolio-card reveal reveal-delay-2">
+                    <div class="portfolio-visual pv-2">
+                        <div class="bg-pattern"></div>
+                        <span class="icon-big">🌐</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Development</span>
+                        <h4>Portal Corporativo</h4>
+                        <p>Sitio web empresarial con integración CRM, automatización de ventas y panel de métricas en vivo.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">🖥️</div>
-                    <div class="portfolio-content">
-                        <h4>Sistema de Seguridad</h4>
-                        <p class="portfolio-category">Hardware Solutions</p>
-                        <p>Instalación de sistema de vigilancia con 16 cámaras IP y almacenamiento centralizado.</p>
+                <div class="portfolio-card reveal reveal-delay-3">
+                    <div class="portfolio-visual pv-3">
+                        <div class="bg-pattern"></div>
+                        <span class="icon-big">📹</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Hardware Solutions</span>
+                        <h4>Sistema de Vigilancia</h4>
+                        <p>Instalación de 16 cámaras IP con NVR centralizado, almacenamiento en nube y acceso remoto 24/7.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">⚙️</div>
-                    <div class="portfolio-content">
-                        <h4>Automatización de Procesos</h4>
-                        <p class="portfolio-category">Business Automation</p>
-                        <p>Sistema de automatización de facturación y reportes que redujo tiempos operacionales 70%.</p>
+                <div class="portfolio-card reveal reveal-delay-4">
+                    <div class="portfolio-visual pv-4">
+                        <div class="bg-pattern"></div>
+                        <span class="icon-big">⚙️</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Automation</span>
+                        <h4>Automatización ERP</h4>
+                        <p>Sistema de automatización de facturación y reportes que redujo tiempos operacionales en un 70%.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== CONTACT SECTION ==================== -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <div class="section-divider"></div>
+    <section id="contact" class="section contact-bg">
         <div class="container">
-            <div class="section-header">
-                <h2>Contactanos</h2>
-                <p>Cuéntanos sobre tu proyecto y nos pondremos en contacto pronto</p>
-            </div>
-            <div class="contact-wrapper">
-                <div id="messageAlert" class="message-alert"></div>
-                <form id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" name="name" required>
-                        <div class="error-message">Por favor, ingresa tu nombre</div>
+            <div class="contact-grid">
+                <div class="reveal">
+                    <div class="section-label">Contacto</div>
+                    <h2 class="section-title">Hablemos de<br>tu proyecto</h2>
+                    <p class="section-subtitle" style="margin-bottom:2rem;">Cuéntanos qué necesitas y te responderemos en menos de 24 horas con una propuesta personalizada.</p>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📧</div>
+                        <div class="contact-info-text">
+                            <h4>Email</h4>
+                            <p>contacto@ssh.dev</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required>
-                        <div class="error-message">Por favor, ingresa un correo válido</div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📍</div>
+                        <div class="contact-info-text">
+                            <h4>Ubicación</h4>
+                            <p>Disponibles para proyectos remotos y presenciales</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="service">Servicio Requerido</label>
-                        <select id="service" name="service" required>
-                            <option value="">Selecciona un servicio</option>
-                            <option value="Desarrollo de Software">Desarrollo de Software</option>
-                            <option value="Desarrollo Web">Desarrollo Web</option>
-                            <option value="Automatización de Procesos">Automatización de Procesos</option>
-                            <option value="Consultoría Técnica">Consultoría Técnica</option>
-                            <option value="Reparación de Hardware">Reparación de Hardware</option>
-                            <option value="Instalación de Cámaras">Instalación de Cámaras</option>
-                            <option value="Soporte Técnico">Soporte Técnico</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                        <div class="error-message">Por favor, selecciona un servicio</div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">⏱️</div>
+                        <div class="contact-info-text">
+                            <h4>Tiempo de Respuesta</h4>
+                            <p>Menos de 24 horas</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" required
-                            placeholder="Cuéntanos detalles sobre tu proyecto..."></textarea>
-                        <div class="error-message">Por favor, ingresa un mensaje</div>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <div class="contact-form-wrapper">
+                        <div id="formAlert" class="form-alert"></div>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                                <div class="error-msg">Ingresa tu nombre completo</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                                <div class="error-msg">Ingresa un correo válido</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Servicio Requerido</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="Desarrollo de Software">Desarrollo de Software</option>
+                                    <option value="Desarrollo Web">Desarrollo Web</option>
+                                    <option value="Automatización">Automatización de Procesos</option>
+                                    <option value="Consultoría">Consultoría Técnica</option>
+                                    <option value="Reparación">Reparación de Hardware</option>
+                                    <option value="Cámaras">Instalación de Cámaras</option>
+                                    <option value="Soporte">Soporte Técnico</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                                <div class="error-msg">Selecciona un servicio</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" placeholder="Describe tu proyecto o necesidad..." required></textarea>
+                                <div class="error-msg">Escribe un mensaje</div>
+                            </div>
+                            <button type="submit" class="submit-btn">Enviar Consulta →</button>
+                        </form>
                     </div>
-
-                    <button type="submit" class="submit-btn">Enviar Consulta</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Solutions in Software and Hardware</h4>
-                <p>Soluciones tecnológicas integrales para empresas que buscan transformación digital.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">SSH<span>.dev</span></a>
+                <p>Soluciones tecnológicas integrales para empresas que buscan verdadera transformación digital.</p>
+                <div class="social-links">
+                    <a href="https://github.com/JoanMiam" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joan-miam-55614a257" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/solutions_in_software_hardware" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@jowdev-r9h" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1DgRpVzZj3/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
+            <div class="footer-col">
+                <h4>Navegación</h4>
                 <ul>
                     <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#about">Nosotros</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#portfolio">Portafolio</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-                    <a href="#" class="social-icon" aria-label="GitHub">⚙</a>
-                    <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
-                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
-                </div>
+            <div class="footer-col">
+                <h4>Software</h4>
+                <ul>
+                    <li><a href="#services">Desarrollo a Medida</a></li>
+                    <li><a href="#services">Páginas Web</a></li>
+                    <li><a href="#services">Automatización</a></li>
+                    <li><a href="#services">Consultoría</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hardware</h4>
+                <ul>
+                    <li><a href="#services">Reparación</a></li>
+                    <li><a href="#services">Mantenimiento</a></li>
+                    <li><a href="#services">Cámaras IP</a></li>
+                    <li><a href="#services">Soporte Técnico</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="year"></span> Solutions in Software and Hardware. Todos los derechos reservados.</p>
+            <p>Diseñado con precisión por SSH.dev</p>
         </div>
     </footer>
 
-    <script>
-        // ==================== NAVIGATION MENU TOGGLE ==================== 
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
 
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Cerrar menú al hacer click en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // ==================== YEAR IN FOOTER ====================
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // ==================== FORM VALIDATION & SUBMISSION ====================
-        const contactForm = document.getElementById('contactForm');
-        const messageAlert = document.getElementById('messageAlert');
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Reset messages
-            messageAlert.classList.remove('success', 'error');
-            messageAlert.textContent = '';
-
-            // Validate form
-            const isValid = validateForm();
-            if (!isValid) return;
-
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-
-            // Submit form (using EmailJS - commented for local use)
-            // Uncomment and add your EmailJS credentials to use email functionality
-            await submitForm(formData);
-        });
-
-        function validateForm() {
-            let isValid = true;
-            const fields = ['name', 'email', 'service', 'message'];
-
-            fields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                const formGroup = field.parentElement;
-                let fieldValid = false;
-
-                if (fieldId === 'email') {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    fieldValid = field.value.trim() && emailRegex.test(field.value);
-                } else if (fieldId === 'service') {
-                    fieldValid = field.value !== '';
-                } else {
-                    fieldValid = field.value.trim() !== '';
-                }
-
-                if (fieldValid) {
-                    formGroup.classList.remove('error');
-                } else {
-                    formGroup.classList.add('error');
-                    isValid = false;
-                }
-            });
-
-            return isValid;
-        }
-
-        async function submitForm(formData) {
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Enviando...';
-
-            try {
-                // Opción 1: Usar EmailJS (descomentar y configurar con tus credenciales)
-                /*
-                emailjs.init('YOUR_PUBLIC_KEY');
-                
-                const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                    from_name: formData.name,
-                    email: formData.email,
-                    service: formData.service,
-                    message: formData.message,
-                    to_email: 'your-email@example.com'
-                });
-
-                if (response.status === 200) {
-                    showSuccess();
-                    contactForm.reset();
-                } else {
-                    showError();
-                }
-                */
-
-                // Opción 2: Para desarrollo local, mostrar mensaje de éxito
-                // (En producción, reemplazar con EmailJS o backend propio)
-                showSuccess();
-                contactForm.reset();
-
-            } catch (error) {
-                console.error('Error:', error);
-                showError();
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar Consulta';
-            }
-        }
-
-        function showSuccess() {
-            messageAlert.classList.add('success');
-            messageAlert.textContent = '✓ Tu mensaje ha sido enviado correctamente. Te contactaremos pronto.';
-            messageAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function showError() {
-            messageAlert.classList.add('error');
-            messageAlert.textContent = '✗ Error al enviar el mensaje. Por favor, intenta nuevamente.';
-            messageAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        // ==================== FORM FIELD REAL-TIME VALIDATION ====================
-        document.getElementById('name').addEventListener('blur', validateField);
-        document.getElementById('email').addEventListener('blur', validateField);
-        document.getElementById('service').addEventListener('blur', validateField);
-        document.getElementById('message').addEventListener('blur', validateField);
-
-        function validateField(e) {
-            const field = e.target;
-            const formGroup = field.parentElement;
-            let isValid = false;
-
-            if (field.id === 'email') {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                isValid = field.value.trim() && emailRegex.test(field.value);
-            } else if (field.id === 'service') {
-                isValid = field.value !== '';
-            } else {
-                isValid = field.value.trim() !== '';
-            }
-
-            if (isValid) {
-                formGroup.classList.remove('error');
-            } else {
-                formGroup.classList.add('error');
-            }
-        }
-
-        // ==================== SCROLL ANIMATIONS ====================
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in class
-        document.querySelectorAll('.service-card, .why-card, .portfolio-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // ==================== SMOOTH SCROLL LINK BEHAVIOR ====================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#home') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
