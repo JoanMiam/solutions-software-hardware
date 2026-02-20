@@ -350,11 +350,15 @@ nav {
 .hero-logo-container {
     margin-bottom: 1.5rem;
     animation: fadeInLogo 1s ease-out;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-logo {
-    max-width: 340px;
-    height: auto;
+    width: 280px !important;
+    max-width: 280px !important;
+    height: auto !important;
+    display: block;
     filter: brightness(1.1);
     transition: var(--transition-base);
 }
