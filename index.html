@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions in Software and Hardware — Soluciones Tecnológicas Integrales</title>
-    <meta name="description" content="Soluciones integrales en software y hardware. Desarrollo de software a medida, páginas web profesionales y servicios de mantenimiento técnico.">
-    <meta name="keywords" content="desarrollo software, hardware, consultoría tecnológica, reparación computadoras, Joan Miam">
+    <title>Solutions in Software and Hardware — Digitalización e Infraestructura Tecnológica</title>
+    <meta name="description"
+        content="Digitalizamos y fortalecemos la infraestructura tecnológica de tu empresa. Desarrollo de software, automatización y soporte técnico continuo.">
+    <meta name="keywords"
+        content="digitalización empresarial, infraestructura tecnológica, desarrollo software, automatización, consultoría tecnológica">
     <meta name="author" content="Solutions in Software and Hardware">
     <meta name="theme-color" content="#0A1628">
-    
-    <!-- Open Graph / Social Media -->
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Solutions in Software and Hardware">
-    <meta property="og:description" content="Soluciones tecnológicas integrales - Desarrollo de software y servicios de hardware profesionales">
-    <meta property="og:url" content="https://joanmiam.github.io/solutions-software-hardware/">
-    
+    <meta property="og:description"
+        content="Digitalizamos y fortalecemos la infraestructura tecnológica de tu empresa.">
+    <meta property="og:url" content="https://solutionssh.me/">
+    <meta property="og:image" content="https://solutionssh.me/assets/icons/5dd41816-a96c-4f97-a212-5958f110f3b8.png">
+
+    <!-- Favicon - Adaptable al tema del sistema -->
+    <link rel="icon" type="image/png" href="assets/icons/5dd41816-a96c-4f97-a212-5958f110f3b8.png"
+        media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="assets/icons/logooscuro.png" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" href="assets/icons/5dd41816-a96c-4f97-a212-5958f110f3b8.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -38,7 +49,11 @@
     <!-- Header -->
     <header id="header">
         <nav>
-            <a href="#home" class="logo">SSH<span>.dev</span></a>
+            <a href="#home" class="logo">
+                <img src="assets/icons/5dd41816-a96c-4f97-a212-5958f110f3b8.png" alt="SSH Logo" class="logo-img">
+                <span class="logo-text">Solutions</span>
+                <span class="logo-accent">SSH</span>
+            </a>
             <div class="hamburger" id="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
                 <span></span>
                 <span></span>
@@ -48,8 +63,8 @@
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Nosotros</a></li>
                 <li><a href="#services">Servicios</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contact" class="nav-cta">Contacto</a></li>
+                <li><a href="#process">Proceso</a></li>
+                <li><a href="#contact" class="nav-cta">Solicitar Consultoría</a></li>
             </ul>
         </nav>
     </header>
@@ -59,68 +74,112 @@
         <div class="hero-bg"></div>
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
-        <div class="hero-orb hero-orb-3"></div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="pulse"></span>
-                Soluciones Tecnológicas de Próxima Generación
+            <!-- Logo Principal -->
+            <div class="hero-logo-container reveal">
+                <img src="assets/icons/ed08123e-2367-4243-9489-5390ca0cde9c.png"
+                    alt="Solutions in Software and Hardware" class="hero-logo">
             </div>
-            <h1>Solutions in<br><span class="gradient-text">Software &amp; Hardware</span></h1>
-            <p class="hero-tagline">Ingeniería integral que transforma ideas en infraestructura digital sólida — desde el código hasta el circuito.</p>
+            <p class="hero-subtitle">Soluciones tecnológicas que impulsan tu negocio</p>
+            <div class="hero-divider"></div>
+            <h1>Digitalizamos y fortalecemos la<br><span class="gradient-text">infraestructura tecnológica</span><br>de
+                tu empresa</h1>
+            <p class="hero-tagline">Desarrollamos soluciones de software a medida y gestionamos tu infraestructura
+                tecnológica para que tu empresa opere con eficiencia, seguridad y escalabilidad.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Solicitar Consultoría →</a>
-                <a href="#services" class="btn-secondary">Explorar Servicios</a>
+                <a href="#contact" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Solicitar Diagnóstico Tecnológico
+                </a>
+                <a href="#services" class="btn-secondary">Conocer Servicios</a>
             </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="number" data-target="50">0</div>
-                    <div class="label">Proyectos Entregados</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="number" data-target="30">0</div>
-                    <div class="label">Clientes Satisfechos</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="number" data-target="99">0</div>
-                    <div class="label">% Uptime Garantizado</div>
+            <div class="hero-trust">
+                <span class="trust-label">Empresas que confían en nosotros</span>
+                <div class="trust-logos">
+                    <div class="trust-item">+50 Proyectos</div>
+                    <div class="trust-item">+30 Clientes</div>
+                    <div class="trust-item">99.9% Uptime</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <div class="section-divider"></div>
-    <section id="about" class="section about">
+    <section id="about" class="section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-visual reveal">
-                    <div class="about-card-stack">
-                        <div class="about-floating-card afc-1">
-                            <div class="afc-icon">👨‍💻</div>
-                            <div class="afc-title">Ingenieros de Software</div>
-                            <div class="afc-desc">Arquitectura, desarrollo y despliegue de soluciones escalables.</div>
+                <div class="about-content reveal">
+                    <div class="section-label">Sobre Nosotros</div>
+                    <h2 class="section-title">Tecnología que impulsa<br>resultados de negocio</h2>
+                    <p class="about-lead">En <strong>Solutions in Software and Hardware</strong> combinamos desarrollo
+                        de software con gestión de infraestructura tecnológica para ofrecer soluciones integrales que
+                        transforman la operación de tu empresa.</p>
+                    <p>No somos una consultora genérica. Somos un equipo técnico que entiende los desafíos reales de las
+                        empresas y diseña soluciones que generan impacto medible en eficiencia, costos y competitividad.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Soluciones a medida</strong>
+                                <span>Cada proyecto se diseña según tus necesidades específicas</span>
+                            </div>
                         </div>
-                        <div class="about-floating-card afc-2">
-                            <div class="afc-icon">��</div>
-                            <div class="afc-title">Especialistas en Hardware</div>
-                            <div class="afc-desc">Diagnóstico, reparación y configuración de equipos profesionales.</div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Acompañamiento continuo</strong>
+                                <span>Soporte y evolución constante de tus sistemas</span>
+                            </div>
                         </div>
-                        <div class="about-floating-card afc-3">
-                            <div class="afc-icon">🚀</div>
-                            <div class="afc-title">Innovación Constante</div>
-                            <div class="afc-desc">Aplicamos tecnología de vanguardia en cada proyecto que emprendemos.</div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Seguridad y estabilidad</strong>
+                                <span>Infraestructura robusta y protegida</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="founder-signature">
+                        <span class="founder-line"></span>
+                        <div class="founder-info">
+                            <span class="founder-name">Joan Miam</span>
+                            <span class="founder-role">Fundador · Ingeniero de Software</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-text reveal reveal-delay-2">
-                    <div class="section-label">Sobre Nosotros</div>
-                    <h2 class="section-title">Un equipo completo para<br>soluciones completas</h2>
-                    <p>En <strong>Solutions in Software and Hardware</strong>, integramos un equipo multidisciplinario de <strong>ingenieros de software</strong> y <strong>especialistas en hardware</strong> con una misión clara: entregar soluciones tecnológicas de calidad superior que impulsen el crecimiento de tu negocio.</p>
-                    <p>Nos enfocamos en entender las necesidades específicas de cada cliente para diseñar e implementar soluciones personalizadas que generan impacto real en la eficiencia y competitividad de sus operaciones.</p>
-                    <div class="founder-card">
-                        <div class="founder-name">Fundado por Joan Miam</div>
-                        <div class="founder-role">Ingeniero de Software</div>
-                        <div class="founder-quote">"Nuestra visión es integrar soluciones completas en software y hardware para empresas que buscan verdadera transformación digital."</div>
+                <div class="about-visual reveal reveal-delay-2">
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                            <span class="visual-dot"></span>
+                        </div>
+                        <div class="visual-content">
+                            <div class="code-line"><span class="code-key">empresa</span>: "Tu Negocio"</div>
+                            <div class="code-line"><span class="code-key">objetivo</span>: "Digitalización"</div>
+                            <div class="code-line"><span class="code-key">resultado</span>: <span
+                                    class="code-value">"Eficiencia + Crecimiento"</span></div>
+                            <div class="code-line"><span class="code-key">estado</span>: <span class="code-success">✓
+                                    Implementado</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,230 +187,321 @@
     </section>
 
     <!-- Services -->
-    <div class="section-divider"></div>
-    <section id="services" class="section services-bg">
+    <section id="services" class="section services-section">
         <div class="container">
             <div class="section-header center reveal">
-                <div class="section-label" style="justify-content:center;">Nuestros Servicios</div>
-                <h2 class="section-title">Soluciones de extremo a extremo</h2>
-                <p class="section-subtitle">Desde la línea de código hasta la infraestructura física — cubrimos cada aspecto de tu ecosistema tecnológico.</p>
+                <div class="section-label">Nuestros Servicios</div>
+                <h2 class="section-title">Dos áreas, una solución integral</h2>
+                <p class="section-subtitle">Cubrimos el ciclo completo de tu ecosistema tecnológico: desde el desarrollo
+                    de software hasta la gestión de tu infraestructura.</p>
             </div>
-            <div class="services-tabs reveal">
-                <button class="tab-btn active" data-tab="software">💻 Software</button>
-                <button class="tab-btn" data-tab="hardware">🖥️ Hardware</button>
+
+            <!-- Soluciones Digitales -->
+            <div class="service-area reveal">
+                <div class="area-header">
+                    <div class="area-icon digital-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8m-4-4v4" />
+                        </svg>
+                    </div>
+                    <div class="area-title">
+                        <h3>Soluciones Digitales</h3>
+                        <p>Software y plataformas que digitalizan y optimizan tus operaciones</p>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+                            </svg>
+                        </div>
+                        <div class="service-number">01</div>
+                        <h4>Sistemas Personalizados</h4>
+                        <p>Desarrollamos software a medida que automatiza procesos críticos de tu negocio, eliminando
+                            tareas manuales y reduciendo errores operacionales.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18" />
+                                <path d="M9 21V9" />
+                            </svg>
+                        </div>
+                        <div class="service-number">02</div>
+                        <h4>Desarrollo Web Corporativo</h4>
+                        <p>Sitios web profesionales que posicionan tu marca, generan leads cualificados y funcionan como
+                            herramienta comercial 24/7.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 3v3m6.36-.36l-2.12 2.12M21 12h-3M18.36 18.36l-2.12-2.12M12 21v-3M7.76 18.36l2.12-2.12M3 12h3M5.64 5.64l2.12 2.12" />
+                                <circle cx="12" cy="12" r="4" />
+                            </svg>
+                        </div>
+                        <div class="service-number">03</div>
+                        <h4>Automatización de Procesos</h4>
+                        <p>Identificamos tareas repetitivas en tu operación y las automatizamos, liberando tiempo de tu
+                            equipo para actividades de mayor valor.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18" />
+                                <path d="M18 17V9" />
+                                <path d="M13 17V5" />
+                                <path d="M8 17v-3" />
+                            </svg>
+                        </div>
+                        <div class="service-number">04</div>
+                        <h4>Consultoría Tecnológica</h4>
+                        <p>Evaluamos tu infraestructura actual y diseñamos una hoja de ruta tecnológica alineada con tus
+                            objetivos de negocio.</p>
+                    </div>
+                </div>
             </div>
-            <div class="services-panel active" id="panel-software">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon-wrap">⚙️</div>
-                    <h4>Desarrollo a Medida</h4>
-                    <p>Software personalizado desde cero con arquitectura escalable, adaptado exactamente a tus necesidades de negocio.</p>
+
+            <!-- Infraestructura Tecnológica -->
+            <div class="service-area reveal">
+                <div class="area-header">
+                    <div class="area-icon infra-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                    </div>
+                    <div class="area-title">
+                        <h3>Infraestructura Tecnológica</h3>
+                        <p>Gestión y mantenimiento de equipos para una operación estable y segura</p>
+                    </div>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon-wrap">🌐</div>
-                    <h4>Páginas Web Profesionales</h4>
-                    <p>Sitios web modernos, responsive y optimizados para conversiones, SEO y experiencia de usuario premium.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon-wrap">🚀</div>
-                    <h4>Soluciones Digitales</h4>
-                    <p>Plataformas digitales completas para transformar tu modelo de negocio y conectar con tus clientes.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-4">
-                    <div class="service-icon-wrap">🤖</div>
-                    <h4>Automatización</h4>
-                    <p>Sistemas de automatización inteligentes que aumentan productividad y reducen costos operacionales hasta un 70%.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-5">
-                    <div class="service-icon-wrap">📊</div>
-                    <h4>Consultoría Técnica</h4>
-                    <p>Asesoría profesional en arquitectura de software, mejores prácticas y estrategia tecnológica empresarial.</p>
-                </div>
-            </div>
-            <div class="services-panel" id="panel-hardware">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon-wrap">🔧</div>
-                    <h4>Reparación de Computadoras</h4>
-                    <p>Diagnóstico y reparación profesional de equipos — desde motherboard hasta restauración de sistemas operativos.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon-wrap">🛡️</div>
-                    <h4>Mantenimiento Preventivo</h4>
-                    <p>Mantenimiento regular para prolongar vida útil de equipos, optimizar rendimiento y prevenir fallas críticas.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon-wrap">📹</div>
-                    <h4>Cámaras de Seguridad</h4>
-                    <p>Instalación de sistemas de vigilancia con cámaras IP de alta definición, NVR y monitoreo remoto 24/7.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-4">
-                    <div class="service-icon-wrap">🎯</div>
-                    <h4>Soporte Técnico Presencial</h4>
-                    <p>Equipo técnico en sitio para resolver problemáticas de forma rápida, profesional y con garantía de servicio.</p>
+                <div class="services-grid">
+                    <div class="service-card infra-card">
+                        <div class="service-card-icon infra">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                        </div>
+                        <div class="service-number">01</div>
+                        <h4>Mantenimiento Preventivo</h4>
+                        <p>Programas de mantenimiento que previenen fallas, extienden la vida útil de tus equipos y
+                            evitan interrupciones costosas en tu operación.</p>
+                    </div>
+                    <div class="service-card infra-card">
+                        <div class="service-card-icon infra">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
+                        <div class="service-number">02</div>
+                        <h4>Optimización de Equipos</h4>
+                        <p>Diagnóstico y mejora del rendimiento de tu parque tecnológico para maximizar productividad
+                            sin necesidad de reemplazos prematuros.</p>
+                    </div>
+                    <div class="service-card infra-card">
+                        <div class="service-card-icon infra">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                                <path
+                                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                            </svg>
+                        </div>
+                        <div class="service-number">03</div>
+                        <h4>Soporte Técnico Continuo</h4>
+                        <p>Equipo técnico disponible para resolver incidencias, implementar mejoras y asegurar que tu
+                            infraestructura opere sin contratiempos.</p>
+                    </div>
+                    <div class="service-card infra-card">
+                        <div class="service-card-icon infra">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                <circle cx="12" cy="13" r="4" />
+                            </svg>
+                        </div>
+                        <div class="service-number">04</div>
+                        <h4>Videovigilancia Empresarial</h4>
+                        <p>Diseño e instalación de sistemas de seguridad con cámaras IP, grabación en nube y monitoreo
+                            remoto para proteger tus instalaciones.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us -->
-    <div class="section-divider"></div>
-    <section class="section why-us-bg">
+    <!-- Process -->
+    <section id="process" class="section process-section">
         <div class="container">
             <div class="section-header center reveal">
-                <div class="section-label" style="justify-content:center;">Ventajas</div>
-                <h2 class="section-title">¿Por qué elegirnos?</h2>
-                <p class="section-subtitle">Características que nos diferencian en la industria tecnológica.</p>
+                <div class="section-label">Metodología</div>
+                <h2 class="section-title">Nuestro Proceso</h2>
+                <p class="section-subtitle">Un enfoque estructurado que garantiza resultados predecibles y alineados con
+                    tus expectativas.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card reveal reveal-delay-1">
-                    <div class="why-icon">✦</div>
-                    <h4>Profesionalismo</h4>
-                    <p>Equipo certificado con experiencia demostrada en soluciones tecnológicas complejas de alto rendimiento.</p>
+            <div class="process-grid">
+                <div class="process-card reveal reveal-delay-1">
+                    <div class="process-step">01</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h4>Diagnóstico</h4>
+                    <p>Analizamos tu situación actual, identificamos puntos de mejora y entendemos los objetivos
+                        específicos de tu negocio.</p>
                 </div>
-                <div class="why-card reveal reveal-delay-2">
-                    <div class="why-icon">⚡</div>
-                    <h4>100% Personalizado</h4>
-                    <p>No usamos templates genéricos. Cada solución es diseñada exclusivamente para tu negocio y objetivos.</p>
+                <div class="process-connector"></div>
+                <div class="process-card reveal reveal-delay-2">
+                    <div class="process-step">02</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h4>Propuesta</h4>
+                    <p>Diseñamos una solución técnica detallada con alcance, tiempos y costos claros. Sin sorpresas ni
+                        letra pequeña.</p>
                 </div>
-                <div class="why-card reveal reveal-delay-3">
-                    <div class="why-icon">📞</div>
-                    <h4>Atención Directa</h4>
-                    <p>Comunicación directa con el equipo técnico. Sin intermediarios, sin consultores genéricos. Solo resultados.</p>
+                <div class="process-connector"></div>
+                <div class="process-card reveal reveal-delay-3">
+                    <div class="process-step">03</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h4>Implementación</h4>
+                    <p>Ejecutamos el proyecto con metodologías ágiles, entregas incrementales y comunicación constante
+                        sobre el avance.</p>
                 </div>
-                <div class="why-card reveal reveal-delay-4">
-                    <div class="why-icon">🎯</div>
-                    <h4>Tecnología Actual</h4>
-                    <p>Stack tecnológico moderno y herramientas de última generación para soluciones robustas y escalables.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <div class="section-divider"></div>
-    <section id="portfolio" class="section portfolio-bg">
-        <div class="container">
-            <div class="section-header center reveal">
-                <div class="section-label" style="justify-content:center;">Portafolio</div>
-                <h2 class="section-title">Proyectos destacados</h2>
-                <p class="section-subtitle">Una muestra del trabajo que realizamos para nuestros clientes.</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card reveal reveal-delay-1">
-                    <div class="portfolio-visual pv-1">
-                        <div class="bg-pattern"></div>
-                        <span class="icon-big">📱</span>
+                <div class="process-connector"></div>
+                <div class="process-card reveal reveal-delay-4">
+                    <div class="process-step">04</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
                     </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-tag">Mobile App</span>
-                        <h4>Aplicación de Inventario</h4>
-                        <p>Plataforma de gestión de inventario en tiempo real para empresa de retail con sincronización multi-sede.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card reveal reveal-delay-2">
-                    <div class="portfolio-visual pv-2">
-                        <div class="bg-pattern"></div>
-                        <span class="icon-big">🌐</span>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-tag">Web Development</span>
-                        <h4>Portal Corporativo</h4>
-                        <p>Sitio web empresarial con integración CRM, automatización de ventas y panel de métricas en vivo.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card reveal reveal-delay-3">
-                    <div class="portfolio-visual pv-3">
-                        <div class="bg-pattern"></div>
-                        <span class="icon-big">📹</span>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-tag">Hardware Solutions</span>
-                        <h4>Sistema de Vigilancia</h4>
-                        <p>Instalación de 16 cámaras IP con NVR centralizado, almacenamiento en nube y acceso remoto 24/7.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card reveal reveal-delay-4">
-                    <div class="portfolio-visual pv-4">
-                        <div class="bg-pattern"></div>
-                        <span class="icon-big">⚙️</span>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-tag">Automation</span>
-                        <h4>Automatización ERP</h4>
-                        <p>Sistema de automatización de facturación y reportes que redujo tiempos operacionales en un 70%.</p>
-                    </div>
+                    <h4>Seguimiento</h4>
+                    <p>Monitoreamos el desempeño, realizamos ajustes y te acompañamos en la evolución continua de tu
+                        solución.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <div class="section-divider"></div>
-    <section id="contact" class="section contact-bg">
+    <section id="contact" class="section contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="reveal">
+                <div class="contact-info reveal">
                     <div class="section-label">Contacto</div>
-                    <h2 class="section-title">Hablemos de<br>tu proyecto</h2>
-                    <p class="section-subtitle" style="margin-bottom:2rem;">Cuéntanos qué necesitas y te responderemos en menos de 24 horas con una propuesta personalizada.</p>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">📧</div>
-                        <div class="contact-info-text">
-                            <h4>Email</h4>
-                            <p>contacto@ssh.dev</p>
+                    <h2 class="section-title">Conversemos sobre<br>tu proyecto</h2>
+                    <p class="contact-lead">Cuéntanos qué desafío tecnológico enfrenta tu empresa. Te responderemos en
+                        menos de 24 horas con una evaluación inicial sin costo.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">joanchan082@gmail.com</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">📍</div>
-                        <div class="contact-info-text">
-                            <h4>Ubicación</h4>
-                            <p>Disponibles para proyectos remotos y presenciales</p>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="contact-card-label">Tiempo de respuesta</span>
+                                <span class="contact-card-value">Menos de 24 horas</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">⏱️</div>
-                        <div class="contact-info-text">
-                            <h4>Tiempo de Respuesta</h4>
-                            <p>Menos de 24 horas</p>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="contact-card-label">Cobertura</span>
+                                <span class="contact-card-value">Remoto y presencial</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="reveal reveal-delay-2">
-                    <div class="contact-form-wrapper">
-                        <div id="formAlert" class="form-alert"></div>
-                        <form id="contactForm" novalidate>
-                            <div class="form-group">
-                                <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                                <div class="error-msg">Ingresa tu nombre completo</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                                <div class="error-msg">Ingresa un correo válido</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Servicio Requerido</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Selecciona un servicio</option>
-                                    <option value="Desarrollo de Software">Desarrollo de Software</option>
-                                    <option value="Desarrollo Web">Desarrollo Web</option>
+                <div class="contact-form-wrapper reveal reveal-delay-2">
+                    <div id="formAlert" class="form-alert"></div>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            <div class="error-msg">Ingresa tu nombre</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required>
+                            <div class="error-msg">Ingresa un correo válido</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">¿Qué necesitas?</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona una opción</option>
+                                <optgroup label="Soluciones Digitales">
+                                    <option value="Sistema Personalizado">Sistema Personalizado</option>
+                                    <option value="Desarrollo Web">Desarrollo Web Corporativo</option>
                                     <option value="Automatización">Automatización de Procesos</option>
-                                    <option value="Consultoría">Consultoría Técnica</option>
-                                    <option value="Reparación">Reparación de Hardware</option>
-                                    <option value="Cámaras">Instalación de Cámaras</option>
+                                    <option value="Consultoría">Consultoría Tecnológica</option>
+                                </optgroup>
+                                <optgroup label="Infraestructura">
+                                    <option value="Mantenimiento">Mantenimiento de Equipos</option>
                                     <option value="Soporte">Soporte Técnico</option>
-                                    <option value="Otro">Otro</option>
-                                </select>
-                                <div class="error-msg">Selecciona un servicio</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensaje</label>
-                                <textarea id="message" name="message" placeholder="Describe tu proyecto o necesidad..." required></textarea>
-                                <div class="error-msg">Escribe un mensaje</div>
-                            </div>
-                            <button type="submit" class="submit-btn">Enviar Consulta →</button>
-                        </form>
-                    </div>
+                                    <option value="Videovigilancia">Sistema de Videovigilancia</option>
+                                </optgroup>
+                                <option value="Otro">Otro</option>
+                            </select>
+                            <div class="error-msg">Selecciona una opción</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Cuéntanos sobre tu proyecto</label>
+                            <textarea id="message" name="message"
+                                placeholder="Describe brevemente tu necesidad o desafío..." required></textarea>
+                            <div class="error-msg">Escribe un mensaje</div>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Consulta</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -359,65 +509,88 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="#home" class="logo">SSH<span>.dev</span></a>
-                <p>Soluciones tecnológicas integrales para empresas que buscan verdadera transformación digital.</p>
-                <div class="social-links">
-                    <a href="https://github.com/JoanMiam" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-text">Solutions in Software and Hardware</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/joan-miam-55614a257" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/solutions_in_software_hardware" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="https://youtube.com/@jowdev-r9h" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/share/1DgRpVzZj3/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                    </a>
+                    <p>Digitalizamos y fortalecemos la infraestructura tecnológica de empresas que buscan operar con
+                        eficiencia y competitividad.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/JoanMiam" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joan-miam-55614a257" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/solutions_in_software_hardware" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1DgRpVzZj3/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#about">Nosotros</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#process">Proceso</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Soluciones Digitales</h4>
+                        <ul>
+                            <li><a href="#services">Sistemas Personalizados</a></li>
+                            <li><a href="#services">Desarrollo Web</a></li>
+                            <li><a href="#services">Automatización</a></li>
+                            <li><a href="#services">Consultoría</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Infraestructura</h4>
+                        <ul>
+                            <li><a href="#services">Mantenimiento</a></li>
+                            <li><a href="#services">Optimización</a></li>
+                            <li><a href="#services">Soporte Técnico</a></li>
+                            <li><a href="#services">Videovigilancia</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#portfolio">Portafolio</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Solutions in Software and Hardware. Todos los derechos reservados.</p>
             </div>
-            <div class="footer-col">
-                <h4>Software</h4>
-                <ul>
-                    <li><a href="#services">Desarrollo a Medida</a></li>
-                    <li><a href="#services">Páginas Web</a></li>
-                    <li><a href="#services">Automatización</a></li>
-                    <li><a href="#services">Consultoría</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Hardware</h4>
-                <ul>
-                    <li><a href="#services">Reparación</a></li>
-                    <li><a href="#services">Mantenimiento</a></li>
-                    <li><a href="#services">Cámaras IP</a></li>
-                    <li><a href="#services">Soporte Técnico</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Solutions in Software and Hardware. Todos los derechos reservados.</p>
-            <p>Diseñado con precisión por SSH.dev</p>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>

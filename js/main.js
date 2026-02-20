@@ -1,425 +1,289 @@
 /**
  * Solutions in Software and Hardware
- * JavaScript principal del sitio web
- * @author Joan Miam
- * @version 2.0.0
+ * JavaScript principal
+ * @version 3.0.0
  */
 
 // ==================== CONFIGURACIÓN ====================
 const CONFIG = {
-    emailJS: {
+    emailjs: {
         publicKey: 'D-Lk7Hwfa0-o1Ep8p',
         serviceId: 'service_06d3ujg',
         templateId: 'template_um8398s'
     },
-    socialLinks: {
+    social: {
         github: 'https://github.com/JoanMiam',
         linkedin: 'https://www.linkedin.com/in/joan-miam-55614a257',
         instagram: 'https://www.instagram.com/solutions_in_software_hardware',
         youtube: 'https://youtube.com/@jowdev-r9h',
         facebook: 'https://www.facebook.com/share/1DgRpVzZj3/'
-    },
-    animation: {
-        counterDuration: 2000,
-        scrollThreshold: 0.1,
-        preloaderDelay: 800
     }
 };
 
-// ==================== INICIALIZACIÓN ====================
+// ==================== DOM READY ====================
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
-    initCursorGlow();
     initHeader();
-    initNavigation();
-    initSmoothScroll();
+    initMobileNav();
+    initCursorGlow();
     initScrollReveal();
-    initCounters();
-    initServiceTabs();
+    initBackToTop();
     initContactForm();
-    initParallaxOrbs();
     initYear();
-    initEmailJS();
 });
 
 // ==================== PRELOADER ====================
 function initPreloader() {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+    
     window.addEventListener('load', () => {
         setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                preloader.classList.add('hidden');
-            }
-        }, CONFIG.animation.preloaderDelay);
+            preloader.classList.add('hidden');
+        }, 500);
     });
-}
-
-// ==================== CURSOR GLOW ====================
-function initCursorGlow() {
-    const cursorGlow = document.getElementById('cursorGlow');
     
-    if (window.matchMedia('(pointer: fine)').matches && cursorGlow) {
-        document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = e.clientX + 'px';
-            cursorGlow.style.top = e.clientY + 'px';
-        });
-    }
+    // Fallback
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+    }, 3000);
 }
 
 // ==================== HEADER ====================
 function initHeader() {
     const header = document.getElementById('header');
-    const backToTop = document.getElementById('backToTop');
-
+    if (!header) return;
+    
+    let lastScroll = 0;
+    
     window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
+        const currentScroll = window.pageYOffset;
         
-        if (header) {
-            header.classList.toggle('scrolled', scrollY > 50);
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
         
-        if (backToTop) {
-            backToTop.classList.toggle('visible', scrollY > 500);
-        }
-        
-        highlightNavLink();
-    });
-
-    if (backToTop) {
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+        lastScroll = currentScroll;
+    }, { passive: true });
 }
 
-// ==================== NAVEGACIÓN ====================
-function initNavigation() {
+// ==================== MOBILE NAVIGATION ====================
+function initMobileNav() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('open');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-            });
-        });
-
-        // Cerrar menú al hacer clic fuera
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-            }
-        });
-    }
-}
-
-function highlightNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const navAnchors = document.querySelectorAll('.nav-links a');
-    let current = '';
     
-    sections.forEach(section => {
-        if (window.scrollY >= section.offsetTop - 150) {
-            current = section.getAttribute('id');
+    if (!hamburger || !navLinks) return;
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
     
-    navAnchors.forEach(anchor => {
-        anchor.classList.toggle('active', anchor.getAttribute('href') === '#' + current);
+    // Keyboard accessibility
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            hamburger.click();
+        }
     });
 }
 
-// ==================== SMOOTH SCROLL ====================
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
+// ==================== CURSOR GLOW ====================
+function initCursorGlow() {
+    const glow = document.getElementById('cursorGlow');
+    if (!glow || window.matchMedia('(pointer: coarse)').matches) {
+        if (glow) glow.style.display = 'none';
+        return;
+    }
+    
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    }, { passive: true });
+    
+    function animate() {
+        currentX += (mouseX - currentX) * 0.1;
+        currentY += (mouseY - currentY) * 0.1;
+        glow.style.left = currentX + 'px';
+        glow.style.top = currentY + 'px';
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
 }
 
 // ==================== SCROLL REVEAL ====================
 function initScrollReveal() {
-    const revealObserver = new IntersectionObserver((entries) => {
+    const reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
             }
         });
-    }, { 
-        threshold: CONFIG.animation.scrollThreshold, 
-        rootMargin: '0px 0px -80px 0px' 
-    });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-    
-    // Exportar para uso en tabs
-    window.revealObserver = revealObserver;
-}
-
-// ==================== CONTADORES ====================
-function initCounters() {
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelectorAll('.number[data-target]').forEach(counter => {
-                    animateCounter(counter);
-                });
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const heroStats = document.querySelector('.hero-stats');
-    if (heroStats) {
-        counterObserver.observe(heroStats);
-    }
-}
-
-function animateCounter(counter) {
-    const target = +counter.getAttribute('data-target');
-    const duration = CONFIG.animation.counterDuration;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
-        }
-        counter.textContent = Math.floor(current) + '+';
-    }, 16);
-}
-
-// ==================== SERVICE TABS ====================
-function initServiceTabs() {
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tab = btn.dataset.tab;
-            
-            // Actualizar botones
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            // Actualizar paneles
-            document.querySelectorAll('.services-panel').forEach(panel => {
-                panel.classList.remove('active');
-                if (panel.id === 'panel-' + tab) {
-                    panel.classList.add('active');
-                    
-                    // Re-observar elementos reveal
-                    panel.querySelectorAll('.reveal').forEach(el => {
-                        el.classList.remove('visible');
-                        void el.offsetWidth; // Force reflow
-                        if (window.revealObserver) {
-                            window.revealObserver.observe(el);
-                        }
-                    });
-                }
-            });
-        });
-    });
-}
-
-// ==================== EMAILJS ====================
-function initEmailJS() {
-    // Cargar EmailJS dinámicamente
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-    script.onload = () => {
-        emailjs.init(CONFIG.emailJS.publicKey);
-        console.log('✓ EmailJS inicializado correctamente');
-    };
-    document.head.appendChild(script);
-}
-
-// ==================== FORMULARIO DE CONTACTO ====================
-function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    const formAlert = document.getElementById('formAlert');
-
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Resetear alerta
-        if (formAlert) {
-            formAlert.className = 'form-alert';
-            formAlert.textContent = '';
-        }
-        
-        // Validar
-        if (!validateForm()) return;
-        
-        // Enviar
-        const data = {
-            from_name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value
-        };
-        
-        await submitForm(data);
-    });
-
-    // Validación en tiempo real
-    ['name', 'email', 'service', 'message'].forEach(id => {
-        const field = document.getElementById(id);
-        if (!field) return;
-        
-        field.addEventListener('blur', () => {
-            validateField(field);
-        });
-        
-        field.addEventListener('input', () => {
-            field.parentElement.classList.remove('error');
-        });
-    });
-}
-
-function validateForm() {
-    let valid = true;
-    
-    ['name', 'email', 'service', 'message'].forEach(id => {
-        const field = document.getElementById(id);
-        if (!validateField(field)) {
-            valid = false;
-        }
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
     
-    return valid;
+    reveals.forEach(el => observer.observe(el));
 }
 
-function validateField(field) {
-    if (!field) return true;
-    
-    const id = field.id;
-    const group = field.parentElement;
-    let ok = false;
-    
-    if (id === 'email') {
-        ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
-    } else if (id === 'service') {
-        ok = field.value !== '';
-    } else {
-        ok = field.value.trim() !== '';
-    }
-    
-    group.classList.toggle('error', !ok);
-    return ok;
-}
-
-async function submitForm(data) {
-    const btn = document.querySelector('.submit-btn');
-    const formAlert = document.getElementById('formAlert');
-    const contactForm = document.getElementById('contactForm');
-    
+// ==================== BACK TO TOP ====================
+function initBackToTop() {
+    const btn = document.getElementById('backToTop');
     if (!btn) return;
     
-    btn.disabled = true;
-    btn.textContent = 'Enviando...';
-    
-    try {
-        // Enviar con EmailJS
-        if (typeof emailjs !== 'undefined') {
-            await emailjs.send(
-                CONFIG.emailJS.serviceId,
-                CONFIG.emailJS.templateId,
-                data
-            );
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+            btn.classList.add('visible');
         } else {
-            // Fallback si EmailJS no está cargado
-            console.warn('EmailJS no disponible, simulando envío...');
-            await new Promise(r => setTimeout(r, 1000));
+            btn.classList.remove('visible');
         }
-        
-        if (formAlert) {
-            formAlert.className = 'form-alert success';
-            formAlert.textContent = '✓ Mensaje enviado correctamente. Te contactaremos pronto.';
-        }
-        
-        if (contactForm) {
-            contactForm.reset();
-        }
-        
-    } catch (err) {
-        console.error('Error al enviar formulario:', err);
-        
-        if (formAlert) {
-            formAlert.className = 'form-alert error';
-            formAlert.textContent = '✗ Error al enviar. Por favor intenta nuevamente o contáctanos directamente.';
-        }
-    } finally {
-        btn.disabled = false;
-        btn.textContent = 'Enviar Consulta →';
-    }
-}
-
-// ==================== PARALLAX ORBS ====================
-function initParallaxOrbs() {
-    if (window.matchMedia('(pointer: fine)').matches) {
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 2;
-            const y = (e.clientY / window.innerHeight - 0.5) * 2;
-            
-            document.querySelectorAll('.hero-orb').forEach((orb, i) => {
-                const speed = (i + 1) * 10;
-                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
-        });
-    }
-}
-
-// ==================== AÑO DINÁMICO ====================
-function initYear() {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-}
-
-// ==================== UTILIDADES ====================
-const Utils = {
-    // Debounce para optimizar eventos
-    debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    },
+    }, { passive: true });
     
-    // Throttle para limitar frecuencia
-    throttle(func, limit) {
-        let inThrottle;
-        return function(...args) {
-            if (!inThrottle) {
-                func.apply(this, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    }
-};
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
-// Exportar configuración para uso externo
-window.SSHConfig = CONFIG;
-window.SSHUtils = Utils;
+// ==================== CONTACT FORM ====================
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const alert = document.getElementById('formAlert');
+    
+    if (!form) return;
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Reset errors
+        form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+        
+        // Validate
+        let isValid = true;
+        const fields = {
+            name: form.querySelector('#name'),
+            email: form.querySelector('#email'),
+            service: form.querySelector('#service'),
+            message: form.querySelector('#message')
+        };
+        
+        if (!fields.name.value.trim()) {
+            fields.name.parentElement.classList.add('error');
+            isValid = false;
+        }
+        
+        if (!fields.email.value.trim() || !isValidEmail(fields.email.value)) {
+            fields.email.parentElement.classList.add('error');
+            isValid = false;
+        }
+        
+        if (!fields.service.value) {
+            fields.service.parentElement.classList.add('error');
+            isValid = false;
+        }
+        
+        if (!fields.message.value.trim()) {
+            fields.message.parentElement.classList.add('error');
+            isValid = false;
+        }
+        
+        if (!isValid) return;
+        
+        // Submit
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        
+        try {
+            // EmailJS Integration
+            if (typeof emailjs !== 'undefined') {
+                await emailjs.send(
+                    CONFIG.emailjs.serviceId,
+                    CONFIG.emailjs.templateId,
+                    {
+                        from_name: fields.name.value,
+                        from_email: fields.email.value,
+                        company: form.querySelector('#company')?.value || 'No especificada',
+                        service: fields.service.value,
+                        message: fields.message.value
+                    }
+                );
+            }
+            
+            showAlert(alert, 'success', '¡Mensaje enviado! Te contactaremos pronto.');
+            form.reset();
+            
+        } catch (error) {
+            console.error('Error:', error);
+            showAlert(alert, 'error', 'Error al enviar. Intenta de nuevo o escríbenos directamente.');
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function showAlert(el, type, message) {
+    if (!el) return;
+    el.className = `form-alert ${type}`;
+    el.textContent = message;
+    el.style.display = 'block';
+    
+    setTimeout(() => {
+        el.style.display = 'none';
+    }, 5000);
+}
+
+// ==================== YEAR ====================
+function initYear() {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+}
+
+// ==================== EMAILJS INIT ====================
+(function() {
+    // Load EmailJS if not present
+    if (typeof emailjs === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+        script.onload = () => {
+            emailjs.init(CONFIG.emailjs.publicKey);
+        };
+        document.head.appendChild(script);
+    }
+})();
