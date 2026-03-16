@@ -440,3 +440,20 @@ function initMagneticHover() {
         document.head.appendChild(script);
     }
 })();
+
+// ==================== PORTFOLIO CAROUSEL ====================
+const carousel = document.getElementById('portfolioCarousel');
+const prevBtn = document.getElementById('carouselPrev');
+const nextBtn = document.getElementById('carouselNext');
+
+if (carousel && prevBtn && nextBtn) {
+    const scrollAmount = () => carousel.querySelector('.pf-card')?.offsetWidth + 24 || 444;
+
+    prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    });
+}
