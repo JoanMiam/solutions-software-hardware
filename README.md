@@ -4,7 +4,7 @@ Sitio web corporativo oficial de **Solutions in Software and Hardware** — Solu
 
 ## 🌐 Ver sitio en vivo
 
-[https://joanmiam.github.io/solutions-software-hardware/](https://joanmiam.github.io/solutions-software-hardware/)
+[https://solutionssh.me](https://solutionssh.me)
 
 ## Servicios
 

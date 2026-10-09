@@ -57,18 +57,12 @@ function initHeader() {
     const header = document.getElementById('header');
     if (!header) return;
 
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 50) {
+        if (window.pageYOffset > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-
-        lastScroll = currentScroll;
     }, { passive: true });
 }
 
@@ -257,7 +251,6 @@ function initContactForm() {
             name: form.querySelector('#name'),
             email: form.querySelector('#email'),
             phone: form.querySelector('#phone'),
-            budget: form.querySelector('#budget'),
             message: form.querySelector('#message')
         };
 
@@ -285,39 +278,38 @@ function initContactForm() {
         }
 
         // Submit
-        const submitBtn = form.querySelector('.submit-btn-dark') || form.querySelector('.submit-btn');
+        const submitBtn = form.querySelector('.submit-btn-dark');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
 
         try {
-            // Build subject with budget info
-            const budgetText = fields.budget && fields.budget.value
-                ? `Presupuesto: $${Number(fields.budget.value).toLocaleString('es-MX')} MXN`
-                : 'Presupuesto: No especificado';
+            // Sin EmailJS (CDN bloqueado o sin conexión) no hay envío: debe verse como error
+            if (typeof emailjs === 'undefined') {
+                throw new Error('EmailJS no está disponible');
+            }
 
-            const phoneText = fields.phone && fields.phone.value
-                ? `Tel: ${fields.phone.value}`
-                : '';
+            const name = fields.name.value.trim();
+            const phone = fields.phone ? fields.phone.value.trim() : '';
 
-            const subject = `Nuevo proyecto - ${budgetText}`;
+            const subject = `Nuevo proyecto - ${name}`;
 
             // Build complete message
-            const fullMessage = `${fields.message.value}\n\n---\n${phoneText ? phoneText + '\n' : ''}${budgetText}`;
+            const fullMessage = phone
+                ? `${fields.message.value}\n\n---\nTel: ${phone}`
+                : fields.message.value;
 
             // EmailJS Integration
-            if (typeof emailjs !== 'undefined') {
-                await emailjs.send(
-                    CONFIG.emailjs.serviceId,
-                    CONFIG.emailjs.templateId,
-                    {
-                        from_name: fields.name.value,
-                        from_email: fields.email.value,
-                        subject: subject,
-                        message: fullMessage
-                    }
-                );
-            }
+            await emailjs.send(
+                CONFIG.emailjs.serviceId,
+                CONFIG.emailjs.templateId,
+                {
+                    from_name: name,
+                    from_email: fields.email.value.trim(),
+                    subject: subject,
+                    message: fullMessage
+                }
+            );
 
             showAlert(alert, 'success', '¡Mensaje enviado! Te contactaremos pronto.');
             form.reset();
@@ -359,8 +351,6 @@ function initYear() {
 function initParallaxScroll() {
     const heroBg = document.querySelector('.hero-bg');
     const heroGridBg = document.querySelector('.hero-grid-bg');
-    const blobs = document.querySelectorAll('.gradient-blob');
-    const floatIcons = document.querySelectorAll('.float-icon');
 
     if (!heroBg) return;
 
@@ -371,8 +361,6 @@ function initParallaxScroll() {
         // Solo aplicar parallax si estamos en el hero
         if (scrolled < heroHeight) {
             const speed = 0.5;
-            const speedIcons = 0.3;
-            const speedBlobs = 0.7;
 
             // Parallax del fondo
             heroBg.style.transform = `translateY(${scrolled * speed}px)`;
@@ -380,18 +368,6 @@ function initParallaxScroll() {
             if (heroGridBg) {
                 heroGridBg.style.transform = `translateY(${scrolled * speed * 0.8}px)`;
             }
-
-            // Parallax de los blobs
-            blobs.forEach((blob, index) => {
-                const multiplier = (index + 1) * 0.2;
-                blob.style.transform = `translateY(${scrolled * speedBlobs * multiplier}px)`;
-            });
-
-            // Parallax de los iconos flotantes
-            floatIcons.forEach((icon, index) => {
-                const multiplier = (index + 1) * 0.15;
-                icon.style.transform = `translateY(${scrolled * speedIcons * multiplier}px)`;
-            });
         }
     });
 }
