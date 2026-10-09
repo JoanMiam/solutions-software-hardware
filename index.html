@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="digitalización empresarial, infraestructura tecnológica, desarrollo software, automatización, consultoría tecnológica">
     <meta name="author" content="Solutions in Software and Hardware">
-    <meta name="theme-color" content="#0A1628">
+    <meta name="theme-color" content="#0D1B2A">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -31,7 +31,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -39,12 +40,6 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-logo">SSH</div>
-        <div class="preloader-bar"></div>
-    </div>
-
     <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
@@ -52,10 +47,8 @@
     <header id="header">
         <nav>
             <a href="#home" class="logo">
-                <img src="assets/logos/ssh-isotipo.svg" alt="SSH Logo" class="logo-img logo-img-fondo-claro">
-                <img src="assets/logos/ssh-isotipo-claro.svg" alt="SSH Logo" class="logo-img logo-img-fondo-oscuro">
-                <span class="logo-text">Solutions</span>
-                <span class="logo-accent">SSH</span>
+                <img src="assets/logos/ssh-isotipo-claro.svg" alt="" class="logo-img">
+                <span class="logo-name">SSH <span>solutions</span></span>
             </a>
             <div class="hamburger" id="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
                 <span></span>
@@ -85,7 +78,7 @@
         <div class="hero-grid-bg"></div>
 
         <!-- 3D Tech Elements Background -->
-        <div class="hero-3d-tech">
+        <div class="hero-3d-tech" aria-hidden="true">
             <!-- Cámara 3D -->
             <div class="tech-3d tech-camera">
                 <div class="tech-ring ring-outer"></div>
@@ -115,15 +108,15 @@
 
         <div class="hero-content">
             <div class="hero-eyebrow reveal">
-                <span class="eyebrow-line"></span>
-                <span>Software & Hardware Solutions</span>
+                <span class="eyebrow-prompt" aria-hidden="true">›_</span>
+                <span>software &amp; hardware solutions</span>
             </div>
             <h1 class="hero-title reveal">
                 Tecnología que hace<br>
-                <span class="text-gradient">crecer</span> tu negocio
+                <span class="text-accent">crecer</span> tu negocio
             </h1>
             <p class="hero-description reveal">
-                Desarrollamos soluciones web y sistemas personalizados, instalamos cámaras de seguridad
+                Desarrollamos sistemas a medida y sitios web, instalamos cámaras de seguridad
                 y ofrecemos venta y reparación de computadoras para empresas y público en general.
             </p>
             <div class="hero-cta reveal">
@@ -135,13 +128,13 @@
     <!-- About / Diferenciador -->
     <section id="about" class="section">
         <div class="container">
-            <div class="about-new reveal">
+            <div class="section-header reveal">
                 <div class="section-label">Por qué SolutionsSH</div>
-                <h2 class="section-title-xl">
+                <h2 class="section-title">
                     No somos otra consultora.<br>
-                    <span class="text-gradient">Somos tu área técnica de confianza.</span>
+                    <span class="text-accent">Somos tu área técnica de confianza.</span>
                 </h2>
-                <p class="about-text">
+                <p class="section-subtitle">
                     Desarrollamos software, instalamos equipos y damos soporte técnico continuo.
                     Todo integrado para que tu negocio opere mejor, ahorre tiempo y crezca sin problemas técnicos.
                 </p>
@@ -150,7 +143,7 @@
             <div class="diff-grid">
                 <div class="diff-card reveal">
                     <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
@@ -160,17 +153,17 @@
                 </div>
                 <div class="diff-card reveal">
                     <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
                     <h3>Todo en un solo equipo</h3>
-                    <p>Desarrollo web, instalación de cámaras, reparación de equipos y servidores. Sin coordinar
-                        múltiples proveedores.</p>
+                    <p>Desarrollo de sistemas y sitios web, instalación de cámaras, reparación de equipos y
+                        servidores. Sin coordinar múltiples proveedores.</p>
                 </div>
                 <div class="diff-card reveal">
                     <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
@@ -179,58 +172,46 @@
                         complicaciones.</p>
                 </div>
             </div>
-
-
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="section services-section-new">
+    <section id="services" class="section section-alt">
         <div class="container">
-            <div class="section-header-centered reveal">
-                <div class="section-label-elegant">
-                    <span class="label-line-elegant"></span>
-                    <span>Nuestras Soluciones</span>
-                </div>
-                <h2 class="section-title-elegant">Tecnología integral para tu negocio</h2>
-                <p class="section-subtitle-elegant">Desde desarrollo web hasta seguridad y soporte técnico,
-                    ofrecemos soluciones completas para impulsar tu empresa.</p>
+            <div class="section-header reveal">
+                <div class="section-label">Nuestras Soluciones</div>
+                <h2 class="section-title">Tecnología integral para tu negocio</h2>
+                <p class="section-subtitle">Desde sistemas a medida y sitios web hasta videovigilancia y soporte
+                    técnico, ofrecemos soluciones completas para impulsar tu empresa.</p>
             </div>
 
-            <!-- Grid de Soluciones -->
+            <!-- Grid de Soluciones: 2 de software (anchas) + 3 de hardware -->
             <div class="solutions-grid reveal">
-                <!-- Solución 1: Desarrollo Web -->
-                <div class="solution-card">
+                <!-- Solución 1: Desarrollo de Sistemas -->
+                <div class="solution-card solution-card-wide">
+                    <span class="solution-tag">software</span>
                     <div class="solution-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8m-4-4v4" />
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
                         </svg>
                     </div>
-                    <h3 class="solution-title">Desarrollo Web</h3>
+                    <h3 class="solution-title">Desarrollo de Sistemas</h3>
                     <p class="solution-description">
-                        Creamos páginas web modernas y sistemas personalizados que optimizan procesos y fortalecen tu
-                        presencia digital.
+                        Construimos sistemas a la medida de tu operación para ordenar tu información,
+                        automatizar tareas y trabajar con menos errores.
                     </p>
                     <ul class="solution-features">
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span>Desarrollo web profesional</span>
+                            <span>Software a medida</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>Sistemas personalizados</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -238,20 +219,79 @@
                             <span>Automatización de procesos</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span>Integraciones y mejoras</span>
+                            <span>Integración entre sistemas</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Consultoría en ingeniería de software</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Solución 2: Videovigilancia -->
-                <div class="solution-card">
+                <!-- Solución 2: Desarrollo Web -->
+                <div class="solution-card solution-card-wide">
+                    <span class="solution-tag">software</span>
                     <div class="solution-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8m-4-4v4" />
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Desarrollo Web</h3>
+                    <p class="solution-description">
+                        Creamos páginas web modernas que presentan tu negocio, generan contactos
+                        y fortalecen tu presencia digital.
+                    </p>
+                    <ul class="solution-features">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Páginas web profesionales</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Diseño adaptable a celular</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Formularios y contacto por WhatsApp</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Mantenimiento y mejoras</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solución 3: Videovigilancia -->
+                <div class="solution-card">
+                    <span class="solution-tag">hardware</span>
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path
                                 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                         </svg>
@@ -263,7 +303,7 @@
                     </p>
                     <ul class="solution-features">
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -271,7 +311,7 @@
                             <span>Instalación de cámaras IP</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -279,7 +319,7 @@
                             <span>Configuración de DVR/NVR</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -287,7 +327,7 @@
                             <span>Visualiza en tiempo real desde tu celular</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -297,10 +337,11 @@
                     </ul>
                 </div>
 
-                <!-- Solución 3: Venta y Servicio -->
+                <!-- Solución 4: Venta y Servicio -->
                 <div class="solution-card">
+                    <span class="solution-tag">hardware</span>
                     <div class="solution-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path
                                 d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                         </svg>
@@ -312,7 +353,7 @@
                     </p>
                     <ul class="solution-features">
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -320,7 +361,7 @@
                             <span>Venta de equipos nuevos</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -328,7 +369,7 @@
                             <span>Reparación de laptops y PCs</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -336,7 +377,7 @@
                             <span>Mantenimiento preventivo</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -346,10 +387,11 @@
                     </ul>
                 </div>
 
-                <!-- Solución 4: Soporte Técnico -->
+                <!-- Solución 5: Soporte Técnico -->
                 <div class="solution-card">
+                    <span class="solution-tag">hardware</span>
                     <div class="solution-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <path
                                 d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
                         </svg>
@@ -361,7 +403,7 @@
                     </p>
                     <ul class="solution-features">
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -369,7 +411,7 @@
                             <span>Diagnóstico gratuito</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -377,7 +419,7 @@
                             <span>Soporte remoto y presencial</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -385,7 +427,7 @@
                             <span>Mantenimiento preventivo</span>
                         </li>
                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
@@ -398,19 +440,12 @@
         </div>
     </section>
 
-
-
-
-
     <!-- Portfolio -->
     <section id="portfolio" class="section portfolio-section">
         <div class="container">
-            <div class="portfolio-header reveal">
-                <div class="portfolio-label">
-                    <span class="portfolio-label-line"></span>
-                    <span>Portafolio</span>
-                </div>
-                <h2 class="portfolio-title-main">Conoce nuestros proyectos</h2>
+            <div class="section-header reveal">
+                <div class="section-label">Portafolio</div>
+                <h2 class="section-title">Conoce nuestros proyectos</h2>
             </div>
         </div>
 
@@ -425,16 +460,23 @@
                 <!-- Proyecto: Meseros Yucatán -->
                 <div class="pf-card">
                     <div class="pf-img-wrap">
-                        <img src="assets/images/preview-meseros.png" alt="Meseros Yucatán">
+                        <img src="assets/images/preview-meseros.png" alt="Sitio web de Meseros Yucatán" loading="lazy">
                     </div>
-                    <a href="https://meserosyucatan.org" target="_blank" rel="noopener noreferrer" class="pf-visit-btn">VISITAR</a>
+                    <div class="pf-info">
+                        <div>
+                            <span class="pf-kind">sitio web</span>
+                            <h3 class="pf-name">Meseros Yucatán</h3>
+                        </div>
+                        <a href="https://meserosyucatan.org" target="_blank" rel="noopener noreferrer"
+                            class="pf-visit-btn">Visitar</a>
+                    </div>
                 </div>
 
                 <!-- Placeholder: próximo proyecto -->
                 <div class="pf-card pf-card-placeholder">
                     <div class="pf-placeholder-inner">
                         <div class="pf-plus-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36" height="36">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36" height="36" aria-hidden="true">
                                 <path d="M12 4v16m8-8H4" />
                             </svg>
                         </div>
@@ -453,9 +495,9 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section contact-section-new">
+    <section id="contact" class="section section-alt contact-section">
         <!-- 3D Decorative Element -->
-        <div class="contact-3d-element">
+        <div class="contact-3d-element" aria-hidden="true">
             <div class="spiral-3d">
                 <div class="spiral-ring spiral-1"></div>
                 <div class="spiral-ring spiral-2"></div>
@@ -465,37 +507,34 @@
         </div>
 
         <div class="container">
-            <div class="contact-header-centered reveal">
-                <div class="section-label-centered">
-                    <span class="label-line"></span>
-                    <span>Contacto</span>
-                </div>
-                <h2 class="contact-title-big">Queremos escucharte, contáctanos</h2>
-                <p class="contact-subtitle">Escríbenos y a la brevedad un asesor se comunicará contigo.</p>
+            <div class="section-header reveal">
+                <div class="section-label">Contacto</div>
+                <h2 class="section-title">Queremos escucharte, contáctanos</h2>
+                <p class="section-subtitle">Escríbenos y a la brevedad un asesor se comunicará contigo.</p>
             </div>
 
-            <div class="contact-form-centered reveal">
-                <div id="formAlert" class="form-alert"></div>
+            <div class="contact-form-card reveal">
+                <div id="formAlert" class="form-alert" role="status" aria-live="polite"></div>
                 <form id="contactForm" novalidate>
-                    <div class="form-grid-2">
-                        <div class="form-group-dark">
-                            <input type="text" id="name" name="name" placeholder="Nombre*" required>
-                        </div>
-                        <div class="form-group-dark">
-                            <input type="tel" id="phone" name="phone" placeholder="Número telefónico"
-                                pattern="[0-9]{10}" inputmode="numeric">
-                        </div>
+                    <div class="form-field">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-grid-2">
-                        <div class="form-group-dark">
-                            <input type="email" id="email" name="email" placeholder="Correo Electrónico*" required>
+                        <div class="form-field">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Teléfono <span class="form-optional">(opcional)</span></label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
                         </div>
                     </div>
-                    <div class="form-group-dark">
-                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto :)*" rows="6"
-                            required></textarea>
+                    <div class="form-field">
+                        <label for="message">Cuéntanos sobre tu proyecto *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn-dark">Enviar</button>
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
                 </form>
             </div>
         </div>
@@ -518,8 +557,8 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Servicios</h4>
                     <ul class="footer-links">
+                        <li><a href="#services">Desarrollo de Sistemas</a></li>
                         <li><a href="#services">Desarrollo Web</a></li>
-                        <li><a href="#services">Sistemas Personalizados</a></li>
                         <li><a href="#services">Sistemas de Videovigilancia</a></li>
                         <li><a href="#services">Venta y Reparación</a></li>
                         <li><a href="#services">Soporte Técnico</a></li>
@@ -533,6 +572,7 @@
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#about">Nosotros</a></li>
                         <li><a href="#services">Servicios</a></li>
+                        <li><a href="#portfolio">Portafolio</a></li>
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -612,10 +652,6 @@
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
         </svg>
     </a>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-dot"></div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>

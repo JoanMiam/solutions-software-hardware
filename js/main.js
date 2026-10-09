@@ -1,7 +1,7 @@
 /**
  * Solutions in Software and Hardware
  * JavaScript principal
- * @version 3.0.0
+ * @version 4.0.0
  */
 
 // ==================== CONFIGURACIÓN ====================
@@ -22,11 +22,9 @@ const CONFIG = {
 
 // ==================== DOM READY ====================
 document.addEventListener('DOMContentLoaded', () => {
-    initPreloader();
     initHeader();
     initMobileNav();
     initCursorGlow();
-    initCustomCursor();
     initScrollReveal();
     initBackToTop();
     initContactForm();
@@ -34,23 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallaxScroll();
     initMagneticHover();
 });
-
-// ==================== PRELOADER ====================
-function initPreloader() {
-    const preloader = document.getElementById('preloader');
-    if (!preloader) return;
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-        }, 500);
-    });
-
-    // Fallback
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-    }, 3000);
-}
 
 // ==================== HEADER ====================
 function initHeader() {
@@ -132,70 +113,6 @@ function initCursorGlow() {
     animate();
 }
 
-// ==================== CUSTOM CURSOR ====================
-function initCustomCursor() {
-    // Solo en dispositivos con mouse
-    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
-        return;
-    }
-
-    const cursor = document.querySelector('.custom-cursor');
-    const cursorDot = document.querySelector('.custom-cursor-dot');
-
-    if (!cursor || !cursorDot) return;
-
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    let dotX = 0, dotY = 0;
-
-    // Seguimiento del mouse
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        // Mostrar cursor cuando se mueve
-        cursor.classList.add('visible');
-        cursorDot.classList.add('visible');
-    }, { passive: true });
-
-    // Animación suave del cursor
-    function animateCursor() {
-        // Cursor principal (más lento)
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-
-        // Punto central (más rápido)
-        dotX += (mouseX - dotX) * 0.25;
-        dotY += (mouseY - dotY) * 0.25;
-        cursorDot.style.left = dotX + 'px';
-        cursorDot.style.top = dotY + 'px';
-
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // Efecto hover en elementos interactivos
-    const hoverElements = document.querySelectorAll('a, button, .btn-primary-lg, [role="button"]');
-
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hover');
-        });
-
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hover');
-        });
-    });
-
-    // Ocultar cuando el cursor sale de la ventana
-    document.addEventListener('mouseleave', () => {
-        cursor.classList.remove('visible');
-        cursorDot.classList.remove('visible');
-    });
-}
-
 // ==================== SCROLL REVEAL ====================
 function initScrollReveal() {
     const reveals = document.querySelectorAll('.reveal');
@@ -244,7 +161,7 @@ function initContactForm() {
         e.preventDefault();
 
         // Reset errors
-        form.querySelectorAll('.form-group-dark').forEach(g => g.classList.remove('error'));
+        form.querySelectorAll('.form-field').forEach(g => g.classList.remove('error'));
 
         // Get fields
         const fields = {
@@ -278,7 +195,7 @@ function initContactForm() {
         }
 
         // Submit
-        const submitBtn = form.querySelector('.submit-btn-dark');
+        const submitBtn = form.querySelector('.submit-btn');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
@@ -432,4 +349,15 @@ if (carousel && prevBtn && nextBtn) {
     nextBtn.addEventListener('click', () => {
         carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
     });
+
+    // Sin desbordamiento no hay nada que desplazar: se ocultan las flechas
+    const updateArrows = () => {
+        const overflows = carousel.scrollWidth > carousel.clientWidth + 1;
+        prevBtn.hidden = !overflows;
+        nextBtn.hidden = !overflows;
+    };
+
+    updateArrows();
+    window.addEventListener('load', updateArrows);
+    window.addEventListener('resize', updateArrows, { passive: true });
 }
