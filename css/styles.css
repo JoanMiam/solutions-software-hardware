@@ -292,6 +292,16 @@ nav {
     transform: scale(1.05);
 }
 
+/* El header es claro sobre el hero y oscuro al hacer scroll: un isotipo por estado */
+.logo-img-fondo-oscuro,
+header.scrolled .logo-img-fondo-claro {
+    display: none;
+}
+
+header.scrolled .logo-img-fondo-oscuro {
+    display: block;
+}
+
 .logo-text {
     font-size: 0.9rem;
     font-weight: 500;
@@ -3066,10 +3076,10 @@ nav {
 }
 
 .footer-logo-img {
-    height: 160px;
+    height: 104px;
     width: auto;
     object-fit: contain;
-    margin: -30px 0 0 -10px;
+    margin: -12px 0 0 -12px;
     display: block;
 }
 

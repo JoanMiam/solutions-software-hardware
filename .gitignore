@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Kit de marca: material fuente, no se publica (GitHub Pages sirve toda la raíz)
+brand/
