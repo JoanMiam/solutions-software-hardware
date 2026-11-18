@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+
+<!-- =====================================================================
+     VISTA PREVIA AL COMPARTIR (WhatsApp, Facebook, Google)
+     WhatsApp no ejecuta JavaScript y lee estas líneas tal cual. Al
+     personalizar, copia aquí el título, la descripción y la imagen de
+     CONFIG.seo. Si no coinciden, la consola del navegador lo avisa y
+     te da el bloque listo para pegar.
+     ===================================================================== -->
+<title>Clínica Dental Sonríe | Dentista en Mérida, Yucatán</title>
+<meta name="description" content="Consultorio dental en el Centro de Mérida. Limpieza, blanqueamiento, ortodoncia, implantes y urgencias. Agenda tu cita por WhatsApp.">
+<meta property="og:title" content="Clínica Dental Sonríe | Dentista en Mérida, Yucatán">
+<meta property="og:description" content="Consultorio dental en el Centro de Mérida. Limpieza, blanqueamiento, ortodoncia, implantes y urgencias. Agenda tu cita por WhatsApp.">
+<meta property="og:url" content="https://solutionssh.me/demos/clinica-dental/">
+<meta property="og:image" content="https://solutionssh.me/demos/clinica-dental/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<!-- ===================================================================== -->
+
+<meta name="theme-color" content="#0B7A75">
+<link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B7A75'/%3E%3Cg transform='translate(4 4)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5.5c-1.074-.586-2.583-1.5-4-1.5-2.1 0-4 1.247-4 5 0 4.899 1.056 8.41 2.671 10.537.573.756 1.97.521 2.567-.236.398-.505.819-1.439 1.262-2.801.292-.771.892-1.504 1.5-1.5.602 0 1.21.737 1.5 1.5.443 1.362.864 2.295 1.262 2.8.597.759 2 .993 2.567.237C18.944 17.41 20 13.9 20 9c0-3.74-1.908-5-4-5-1.423 0-2.92.911-4 1.5z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..700&display=swap">
+
+<script>
+/* =====================================================================
+   CONFIG: todo lo que cambia de un consultorio a otro vive aquí.
+   Para un consultorio nuevo:
+     1. Cambia este objeto (no hace falta tocar nada más del código).
+     2. Copia título, descripción e imagen de CONFIG.seo al bloque
+        "VISTA PREVIA AL COMPARTIR" de arriba.
+   Los textos traducibles van como { es: "...", en: "..." }. Si solo
+   escribes un texto normal, se usa igual en todos los idiomas.
+   ===================================================================== */
+const CONFIG = {
+  // Franja de demostración arriba. false = desaparece (y la página se
+  // deja indexar en Google).
+  showDemoBanner: true,
+  demoBanner: {
+    texto: { es: "Página de demostración · Hecha por", en: "Demo page · Made by" },
+    autor: "Solutions in Software and Hardware",
+    url: "https://solutionssh.me",
+  },
+
+  // Idiomas activos. El primero es el de entrada. ["es"] oculta el selector.
+  // Para abrir directo en inglés: agrega ?lang=en al link.
+  idiomas: ["es", "en"],
+
+  negocio: {
+    nombre: "Clínica Dental Sonríe",
+    tipo: { es: "Consultorio dental", en: "Dental clinic" },
+    eslogan: {
+      es: "Atención dental cuidadosa para toda la familia, con citas puntuales en el Centro de Mérida.",
+      en: "Gentle dental care for the whole family, with on-time appointments in downtown Mérida.",
+    },
+    logo: "",            // URL o archivo junto al index.html ("logo.png"). Vacío = ícono de diente.
+    rangoPrecios: "$$",  // Para Google: $, $$ o $$$
+  },
+
+  // Cualquier color hex. Si el principal es muy claro, el texto se oscurece
+  // solo para mantener buen contraste.
+  colores: {
+    principal: "#0B7A75",  // botones, enlaces, íconos
+    secundario: "#7DD3C0", // fondos suaves y detalles
+  },
+
+  hero: {
+    imagen: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+    alt: {
+      es: "Consultorio dental luminoso con sillón y equipo moderno",
+      en: "Bright dental office with a modern chair and equipment",
+    },
+  },
+
+  // Cuatro datos rápidos bajo la portada. {cedula} y {anos} se llenan solos.
+  destacados: [
+    { icono: "verificado", texto: { es: "Cédula profesional {cedula}", en: "Professional license {cedula}" } },
+    { icono: "idioma", texto: { es: "Atención en español e inglés", en: "We speak English and Spanish" } },
+    { icono: "botiquin", texto: { es: "Urgencias el mismo día", en: "Same-day emergencies" } },
+    { icono: "tarjeta", texto: { es: "Pago con tarjeta", en: "Cards accepted" } },
+  ],
+
+  doctor: {
+    nombre: "Dra. Andrea Pech Canul",
+    titulo: { es: "Cirujana dentista", en: "Dental surgeon" },
+    cedula: "0000000",
+    enlaceCedula: "https://www.cedulaprofesional.sep.gob.mx/",
+    foto: "https://images.unsplash.com/photo-1594824476967-48c8b964273f", // vacío = iniciales
+    anosExperiencia: 12,
+    descripcion: {
+      es: "Su prioridad es que entiendas tu tratamiento antes de empezar y que cada visita sea tranquila, aunque te den nervios ir al dentista.",
+      en: "Her priority is that you understand your treatment before we start, and that every visit feels calm, even if the dentist makes you nervous.",
+    },
+    formacion: [
+      { es: "Licenciatura en Cirujano Dentista", en: "Degree in Dental Surgery" },
+      { es: "Diplomado en Ortodoncia", en: "Certificate in Orthodontics" },
+      { es: "Actualización continua en implantes dentales", en: "Ongoing training in dental implants" },
+    ],
+    seccion: { es: "Conoce a la doctora", en: "Meet your dentist" }, // línea sobre el nombre
+    menu: { es: "Doctora", en: "Dentist" },                         // texto en el menú
+  },
+
+  // Iconos disponibles: diente, diente-roto, gota, brillo, sonrisa, implante,
+  // nino, botiquin, escudo, corazon, estetoscopio.
+  // precio: número en pesos ("Desde $600") o null para no mostrarlo.
+  moneda: "MXN",
+  servicios: [
+    {
+      icono: "gota", precio: 600,
+      nombre: { es: "Limpieza dental", en: "Dental cleaning" },
+      descripcion: { es: "Quitamos sarro y manchas para prevenir caries y problemas de encías.", en: "We remove tartar and stains to prevent cavities and gum problems." },
+    },
+    {
+      icono: "brillo", precio: 3500,
+      nombre: { es: "Blanqueamiento", en: "Teeth whitening" },
+      descripcion: { es: "Aclara varios tonos tu sonrisa con un tratamiento seguro en consultorio.", en: "Brighten your smile several shades with a safe in-office treatment." },
+    },
+    {
+      icono: "sonrisa", precio: null,
+      nombre: { es: "Ortodoncia", en: "Orthodontics" },
+      descripcion: { es: "Brackets y alineadores transparentes para acomodar tus dientes.", en: "Braces and clear aligners to straighten your teeth." },
+    },
+    {
+      icono: "diente", precio: 700,
+      nombre: { es: "Resinas", en: "Tooth-colored fillings" },
+      descripcion: { es: "Reparamos caries y fracturas con resina del color de tu diente.", en: "We repair cavities and chips with resin that matches your tooth." },
+    },
+    {
+      icono: "diente-roto", precio: null,
+      nombre: { es: "Endodoncia", en: "Root canal" },
+      descripcion: { es: "Tratamiento de conductos para salvar un diente dañado y quitar el dolor.", en: "Root canal treatment to save a damaged tooth and stop the pain." },
+    },
+    {
+      icono: "implante", precio: null,
+      nombre: { es: "Implantes", en: "Dental implants" },
+      descripcion: { es: "Reponemos dientes perdidos con implantes que se ven y se sienten naturales.", en: "We replace missing teeth with implants that look and feel natural." },
+    },
+    {
+      icono: "nino", precio: null,
+      nombre: { es: "Odontopediatría", en: "Kids' dentistry" },
+      descripcion: { es: "Consultas pensadas para niños, con paciencia y sin prisas.", en: "Visits designed for kids, with patience and no rush." },
+    },
+    {
+      icono: "botiquin", precio: null,
+      nombre: { es: "Urgencias dentales", en: "Dental emergencies" },
+      descripcion: { es: "Dolor, golpe o diente roto: te atendemos el mismo día.", en: "Pain, a knock or a broken tooth: we see you the same day." },
+    },
+  ],
+
+  // dias: 0 domingo, 1 lunes ... 6 sábado. horas en formato 24 h.
+  horario: [
+    { dias: [1, 2, 3, 4, 5], horas: [["09:00", "14:00"], ["16:00", "20:00"]] },
+    { dias: [6], horas: [["09:00", "14:00"]] },
+  ],
+
+  cita: {
+    intervaloMinutos: 30,    // cada cuánto se ofrece una hora
+    diasMostrados: 12,       // cuántos días abiertos se pueden elegir
+    anticipacionMinutos: 60, // para hoy, no ofrecer horas antes de esto
+  },
+
+  ubicacion: {
+    calle: "Calle 60 #000",
+    colonia: "Centro",
+    ciudad: "Mérida",
+    estado: "Yucatán",
+    codigoPostal: "97000",
+    pais: "MX",
+    referencias: { es: "A unas cuadras de la Plaza Grande.", en: "A few blocks from Plaza Grande." },
+    zonaHoraria: "America/Merida",
+    mapaBusqueda: "Calle 60, Centro, Mérida, Yucatán", // lo que muestra el mapa
+    mapsLink: "",  // link de "Compartir" de Google Maps. Vacío = búsqueda de la dirección.
+    mapaEmbed: "", // src del "Insertar mapa" de Google Maps. Vacío = se arma con mapaBusqueda.
+  },
+
+  contacto: {
+    whatsapp: "529902286209",       // 52 + 10 dígitos, sin espacios
+    telefono: "+529902286209",      // para el botón de llamar
+    telefonoVisible: "990 228 6209",
+    correo: "",                     // vacío = no se muestra
+    mensajeWhatsApp: {
+      es: "Hola, quiero información sobre sus servicios.",
+      en: "Hi, I'd like some information about your services.",
+    },
+  },
+
+  // Vacío = no se muestra el ícono.
+  redes: {
+    facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
+    tiktok: "",
+  },
+
+  // sonEjemplo: true marca cada tarjeta como "Ejemplo". Ponlo en false
+  // solo con testimonios reales.
+  testimonios: {
+    sonEjemplo: true,
+    lista: [
+      {
+        nombre: "Mariana C.", estrellas: 5,
+        detalle: { es: "Paciente de ortodoncia", en: "Orthodontics patient" },
+        texto: { es: "Llegué con miedo y la doctora me explicó todo con paciencia. Terminé mis alineadores y me encanta el resultado.", en: "I was nervous and the doctor explained everything patiently. I finished my aligners and I love the result." },
+      },
+      {
+        nombre: "Luis Alberto D.", estrellas: 5,
+        detalle: { es: "Urgencia dental", en: "Dental emergency" },
+        texto: { es: "Se me rompió una muela un sábado y me atendieron esa misma mañana. Rápidos, amables y sin sorpresas en el precio.", en: "I broke a molar on a Saturday and they saw me that same morning. Quick, kind and no surprises on the bill." },
+      },
+      {
+        nombre: "Karen W.", estrellas: 5,
+        detalle: { es: "Paciente de Canadá", en: "Patient from Canada" },
+        texto: { es: "Poder explicar todo en inglés me dio mucha confianza. La limpieza fue rápida y muy cuidadosa.", en: "Being able to explain everything in English gave me a lot of confidence. The cleaning was quick and very careful." },
+      },
+    ],
+  },
+
+  faq: [
+    {
+      pregunta: { es: "¿Cuánto cuesta la primera consulta?", en: "How much is the first visit?" },
+      respuesta: { es: "La valoración cuesta $350 e incluye revisión completa y plan de tratamiento por escrito. Si empiezas tratamiento ese mes, se descuenta.", en: "The first visit is $350 MXN and includes a full check-up and a written treatment plan. It's deducted if you start treatment that month." },
+    },
+    {
+      pregunta: { es: "¿Atienden urgencias?", en: "Do you see emergencies?" },
+      respuesta: { es: "Sí. Escríbenos por WhatsApp, cuéntanos qué pasa y te damos el primer espacio libre del día.", en: "Yes. Message us on WhatsApp, tell us what happened and we'll give you the first opening of the day." },
+    },
+    {
+      pregunta: { es: "¿Qué formas de pago aceptan?", en: "Which payment methods do you accept?" },
+      respuesta: { es: "Efectivo, tarjeta de débito o crédito y transferencia. Los tratamientos largos, como la ortodoncia, se pueden pagar por mes.", en: "Cash, debit or credit card and bank transfer. Longer treatments, like orthodontics, can be paid monthly." },
+    },
+    {
+      pregunta: { es: "¿Atienden a niños?", en: "Do you see children?" },
+      respuesta: { es: "Sí, desde los 3 años. La primera visita es tranquila para que se acostumbren al consultorio.", en: "Yes, from age 3. The first visit is relaxed so they can get used to the office." },
+    },
+    {
+      pregunta: { es: "¿La doctora habla inglés?", en: "Does the dentist speak English?" },
+      respuesta: { es: "Sí. Atiende en español y en inglés, y explica cada tratamiento con calma.", en: "Yes. She sees patients in English and Spanish and explains every treatment calmly." },
+    },
+    {
+      pregunta: { es: "¿Dan factura?", en: "Can I get an invoice?" },
+      respuesta: { es: "Sí, emitimos factura (CFDI). Trae tus datos fiscales el día de tu consulta.", en: "Yes, we issue Mexican tax invoices (CFDI). Bring your tax details to your visit." },
+    },
+  ],
+
+  seo: {
+    titulo: { es: "Clínica Dental Sonríe | Dentista en Mérida, Yucatán", en: "Clínica Dental Sonríe | Dentist in Mérida, Yucatán" },
+    descripcion: {
+      es: "Consultorio dental en el Centro de Mérida. Limpieza, blanqueamiento, ortodoncia, implantes y urgencias. Agenda tu cita por WhatsApp.",
+      en: "Dental clinic in downtown Mérida. Cleanings, whitening, orthodontics, implants and emergencies. Book your visit on WhatsApp.",
+    },
+    // Imagen al compartir: 1200 x 630, con URL absoluta. Puede ser un archivo
+    // junto al index.html o una foto de Unsplash con "&w=1200&h=630&fit=crop".
+    imagen: "https://solutionssh.me/demos/clinica-dental/og-image.jpg",
+    url: "https://solutionssh.me/demos/clinica-dental/", // dirección final del sitio. Vacío = la dirección actual.
+  },
+
+  // Crédito en el pie de página. null = no se muestra.
+  credito: {
+    texto: { es: "Sitio hecho por", en: "Website by" },
+    nombre: "Solutions in Software and Hardware",
+    url: "https://solutionssh.me",
+  },
+
+  // ----- Textos de la interfaz. Normalmente no se cambian. -----
+  textos: {
+    es: {
+      saltar: "Saltar al contenido",
+      idioma: "Idioma",
+      menu: "Secciones",
+      nuevaVentana: "(se abre en otra pestaña)",
+      agendar: "Agendar cita",
+      whatsapp: "WhatsApp",
+      whatsappFlotante: "Escríbenos por WhatsApp",
+      nav: { servicios: "Servicios", opiniones: "Opiniones", preguntas: "Preguntas", ubicacion: "Ubicación" },
+      hero: { linea: "{tipo} en {ciudad}, {estado}" },
+      servicios: {
+        titulo: "Tratamientos para toda la familia",
+        intro: "Te explicamos cada tratamiento y su costo antes de empezar.",
+        desde: "Desde {precio}",
+        agendar: "Agendar cita",
+        nota: "Precios de referencia. El costo final se confirma en tu valoración.",
+      },
+      doctor: { cedula: "Cédula profesional", verificar: "Verificar en la SEP", experiencia: "años de experiencia", fotoAlt: "Retrato de {nombre}" },
+      cita: {
+        titulo: "Agenda tu cita",
+        intro: "Elige el servicio, el día y la hora. Te confirmamos por WhatsApp.",
+        puntos: ["Eliges el día y la hora que te acomodan.", "Te confirmamos por WhatsApp en horario de consulta.", "Si necesitas cambiarla, basta con un mensaje."],
+        llamar: "¿Prefieres llamar?",
+        servicio: "Servicio",
+        elegirServicio: "Elige un servicio",
+        fecha: "Día",
+        hoy: "Hoy",
+        hora: "Hora disponible",
+        eligeDia: "Elige un día para ver los horarios.",
+        sinHoras: "Ya no hay horarios este día. Elige otro.",
+        manana: "Mañana",
+        tarde: "Tarde",
+        nombre: "Nombre completo",
+        telefono: "Teléfono",
+        telefonoAyuda: "A 10 dígitos. Solo lo usamos para confirmar tu cita.",
+        enviar: "Enviar por WhatsApp",
+        nota: "Se abrirá WhatsApp con tu solicitud lista. Tu cita queda confirmada cuando te respondamos.",
+        listo: "Abrimos WhatsApp con tu solicitud. Si no se abrió, {enlace}.",
+        listoEnlace: "toca aquí",
+        errores: { servicio: "Elige un servicio.", fecha: "Elige un día.", hora: "Elige una hora.", nombre: "Escribe tu nombre.", telefono: "Escribe un teléfono de 10 dígitos." },
+        mensaje: "Hola, quiero agendar una cita en {clinica}.\n\n*Servicio:* {servicio}\n*Día:* {fecha}\n*Hora:* {hora}\n*Nombre:* {nombre}\n*Teléfono:* {telefono}\n\n¿Me confirman, por favor?",
+      },
+      opiniones: { titulo: "Lo que dicen nuestros pacientes", aviso: "Testimonios de ejemplo para esta demostración.", ejemplo: "Ejemplo", estrellas: "{n} de 5 estrellas" },
+      faq: { titulo: "Preguntas frecuentes" },
+      ubicacion: {
+        titulo: "Cómo llegar", direccion: "Dirección", abrirMapa: "Abrir en Google Maps", horario: "Horario", contacto: "Contacto",
+        mapa: "Mapa con la ubicación de {nombre}",
+        abierto: "Abierto ahora", cierra: "cierra a las {hora}", cerrado: "Cerrado ahora", abre: "abre {cuando} a las {hora}",
+        hoy: "hoy", manana: "mañana", elDia: "el {dia}",
+        rangoDias: "{a} a {b}", rangoHoras: "{a} a {b}", cerradoDia: "Cerrado",
+      },
+      footer: { contacto: "Contacto", horario: "Horario", redes: "Síguenos", derechos: "Todos los derechos reservados." },
+    },
+    en: {
+      saltar: "Skip to content",
+      idioma: "Language",
+      menu: "Sections",
+      nuevaVentana: "(opens in a new tab)",
+      agendar: "Book a visit",
+      whatsapp: "WhatsApp",
+      whatsappFlotante: "Message us on WhatsApp",
+      nav: { servicios: "Services", opiniones: "Reviews", preguntas: "FAQ", ubicacion: "Location" },
+      hero: { linea: "{tipo} in {ciudad}, {estado}" },
+      servicios: {
+        titulo: "Dental care for the whole family",
+        intro: "We explain every treatment and its cost before we start.",
+        desde: "From {precio}",
+        agendar: "Book a visit",
+        nota: "Reference prices. Your final cost is confirmed at your first visit.",
+      },
+      doctor: { cedula: "Professional license", verificar: "Verify on the official registry", experiencia: "years of experience", fotoAlt: "Portrait of {nombre}" },
+      cita: {
+        titulo: "Book your visit",
+        intro: "Pick a service, a day and a time. We'll confirm on WhatsApp.",
+        puntos: ["Choose the day and time that suit you.", "We confirm on WhatsApp during office hours.", "Need to reschedule? Just send us a message."],
+        llamar: "Rather call?",
+        servicio: "Service",
+        elegirServicio: "Choose a service",
+        fecha: "Day",
+        hoy: "Today",
+        hora: "Available time",
+        eligeDia: "Pick a day to see available times.",
+        sinHoras: "No times left for this day. Please pick another.",
+        manana: "Morning",
+        tarde: "Afternoon",
+        nombre: "Full name",
+        telefono: "Phone",
+        telefonoAyuda: "Include the area code. We only use it to confirm your visit.",
+        enviar: "Send via WhatsApp",
+        nota: "WhatsApp will open with your request ready to send. Your visit is confirmed once we reply.",
+        listo: "We opened WhatsApp with your request. If it didn't open, {enlace}.",
+        listoEnlace: "tap here",
+        errores: { servicio: "Choose a service.", fecha: "Pick a day.", hora: "Pick a time.", nombre: "Enter your name.", telefono: "Enter a phone number with area code." },
+        mensaje: "Hi, I'd like to book a visit at {clinica}.\n\n*Service:* {servicio}\n*Day:* {fecha}\n*Time:* {hora}\n*Name:* {nombre}\n*Phone:* {telefono}\n\nCould you confirm, please?",
+      },
+      opiniones: { titulo: "What our patients say", aviso: "Sample reviews for this demo.", ejemplo: "Sample", estrellas: "{n} out of 5 stars" },
+      faq: { titulo: "Frequently asked questions" },
+      ubicacion: {
+        titulo: "How to find us", direccion: "Address", abrirMapa: "Open in Google Maps", horario: "Hours", contacto: "Contact",
+        mapa: "Map showing the location of {nombre}",
+        abierto: "Open now", cierra: "closes at {hora}", cerrado: "Closed now", abre: "opens {cuando} at {hora}",
+        hoy: "today", manana: "tomorrow", elDia: "on {dia}",
+        rangoDias: "{a} to {b}", rangoHoras: "{a} - {b}", cerradoDia: "Closed",
+      },
+      footer: { contacto: "Contact", horario: "Hours", redes: "Follow us", derechos: "All rights reserved." },
+    },
+  },
+};
+</script>
+
+<style>
+/* ==================== TOKENS ==================== */
+/* Los colores de marca se recalculan desde CONFIG.colores al cargar. */
+:root {
+  --c1: #0B7A75;
+  --c1-ink: #0B7A75;
+  --c1-ink-hover: #09625E;
+  --c1-soft: #EAF4F3;
+  --c1-line: #9CCBC8;
+  --c2: #7DD3C0;
+  --c2-soft: #E5F6F2;
+
+  --ink: #0F1E24;
+  --muted: #4A5B63;
+  --line: #E1E8EB;
+  --field: #7D8D96;
+  --soft: #F4F7F8;
+  --danger: #B42318;
+  --wa: #1A9E4B;
+  --night: #0F1E24;
+
+  /* Radios: botones en píldora, controles 12, tarjetas 20, fotos y paneles 28 */
+  --r-pill: 999px;
+  --r-ctl: 12px;
+  --r-card: 20px;
+  --r-media: 28px;
+
+  --shadow: 0 1px 2px rgb(15 30 36 / .05), 0 12px 32px -14px rgb(15 30 36 / .18);
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --header: 64px;
+}
+
+/* ==================== BASE ==================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header) + 12px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -.02em; font-weight: 700; text-wrap: balance; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--c1-ink); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 32px, 1160px); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.ico { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.skip { position: absolute; left: 16px; top: -100px; z-index: 50; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: var(--r-ctl); font-weight: 600; text-decoration: none; }
+.skip:focus { top: 12px; }
+main:focus { outline: none; }
+section[id] { scroll-margin-top: calc(var(--header) + 12px); }
+
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 0 22px;
+  border: 1.5px solid transparent; border-radius: var(--r-pill);
+  font-weight: 600; font-size: 1rem; line-height: 1; text-decoration: none; white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, transform .15s var(--ease);
+}
+.btn:active { transform: translateY(1px) scale(.99); }
+.btn .ico { width: 20px; height: 20px; }
+.btn-primary { background: var(--c1-ink); color: #fff; }
+.btn-primary:hover { background: var(--c1-ink-hover); }
+.btn-ghost { background: #fff; color: var(--c1-ink); border-color: var(--c1-line); }
+.btn-ghost:hover { background: var(--c1-soft); border-color: var(--c1-ink); }
+.btn-lg { min-height: 54px; padding: 0 26px; font-size: 1.0625rem; }
+.btn-sm { min-height: 42px; padding: 0 18px; font-size: .9375rem; }
+.btn-block { width: 100%; }
+
+/* ==================== FRANJA DEMO ==================== */
+.demo-bar { background: var(--soft); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .8125rem; line-height: 1.4; text-align: center; padding: 8px 16px; }
+.demo-bar a { color: var(--ink); font-weight: 600; text-underline-offset: 2px; }
+
+/* ==================== HEADER ==================== */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgb(255 255 255 / .92);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
+  border-bottom: 1px solid var(--line);
+}
+.header-in { display: flex; align-items: center; gap: 12px; min-height: var(--header); }
+.brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-right: auto; text-decoration: none; font-weight: 700; letter-spacing: -.01em; line-height: 1.2; }
+.brand-mark { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--c1-ink); color: #fff; }
+.brand-mark .ico { width: 22px; height: 22px; stroke-width: 2; }
+.brand-logo { height: 36px; width: auto; max-width: 140px; object-fit: contain; }
+.nav { display: none; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.header-cta { display: none; }
+.lang { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: var(--r-pill); background: #fff; }
+.lang-btn { min-width: 44px; min-height: 36px; border: 0; border-radius: var(--r-pill); background: transparent; font-size: .8125rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.lang-btn:hover { color: var(--ink); }
+.lang-btn[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+/* ==================== HERO ==================== */
+.hero { background: linear-gradient(180deg, var(--c1-soft) 0%, #fff 78%); padding-top: 28px; overflow-x: clip; }
+.hero-grid { display: grid; gap: 32px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--c1-ink); font-weight: 600; font-size: .9375rem; }
+.eyebrow .ico { width: 18px; height: 18px; }
+.hero h1 { margin-top: 12px; font-size: clamp(2.375rem, 1.5rem + 3.6vw, 3.75rem); letter-spacing: -.035em; line-height: 1.05; }
+.hero .lead { margin-top: 16px; color: var(--muted); font-size: clamp(1.0625rem, 1rem + .35vw, 1.25rem); max-width: 34em; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-ctas .btn { flex: 1 1 auto; }
+.hero-media { position: relative; isolation: isolate; margin-right: 10px; }
+.hero-media::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: var(--r-media); background: var(--c2-soft); transform: translate(10px, 10px); }
+.hero-media img, .hero-fallback { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-media); background: var(--c2-soft); }
+.hero-fallback { display: grid; place-items: center; color: var(--c1-ink); }
+.hero-fallback .ico { width: 30%; height: auto; stroke-width: 1; }
+
+/* Datos rápidos: tarjeta que monta entre la portada y servicios */
+.facts {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px;
+  margin: 40px 0 -40px; padding: 18px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r-card); box-shadow: var(--shadow);
+}
+.facts li { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: .875rem; line-height: 1.3; }
+.facts .ico { color: var(--c1-ink); }
+
+/* ==================== SECCIONES ==================== */
+.section { padding: 72px 0; }
+.soft { background: var(--soft); }
+.after-facts { padding-top: 112px; }
+.section-head { max-width: 640px; margin-bottom: 36px; }
+.section-head.center { margin-inline: auto; text-align: center; }
+.title { font-size: clamp(1.75rem, 1.25rem + 2vw, 2.5rem); letter-spacing: -.03em; }
+.lead { margin-top: 12px; color: var(--muted); font-size: 1.0625rem; max-width: 60ch; }
+.section-head.center .lead { margin-inline: auto; }
+.kicker { margin-bottom: 8px; color: var(--c1-ink); font-weight: 600; font-size: .9375rem; }
+
+/* ==================== SERVICIOS ==================== */
+.svc-grid { display: grid; gap: 12px; }
+.svc {
+  display: grid; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 6px;
+  padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-card);
+  transition: border-color .25s, box-shadow .25s, transform .25s var(--ease);
+}
+.svc:hover { border-color: var(--c1-line); box-shadow: var(--shadow); transform: translateY(-2px); }
+.svc-ico { grid-row: span 3; display: grid; place-items: center; width: 48px; height: 48px; border-radius: var(--r-ctl); background: var(--c2-soft); color: var(--c1-ink); }
+.svc-ico .ico { width: 26px; height: 26px; }
+.svc h3 { font-size: 1.0625rem; letter-spacing: -.01em; align-self: center; }
+.svc p { color: var(--muted); font-size: .9375rem; line-height: 1.55; }
+.svc-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 12px; margin-top: 6px; }
+.price { font-weight: 700; font-size: .9375rem; white-space: nowrap; }
+.svc-link { display: inline-flex; white-space: nowrap; align-items: center; gap: 6px; min-height: 44px; margin-left: auto; color: var(--c1-ink); font-weight: 600; font-size: .9375rem; text-decoration: none; }
+.svc-link .ico { width: 18px; height: 18px; transition: transform .2s var(--ease); }
+.svc-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.svc-link:hover .ico { transform: translateX(3px); }
+.svc-note { margin-top: 20px; color: var(--muted); font-size: .875rem; }
+
+/* ==================== DOCTORA ==================== */
+.doc-grid { display: grid; gap: 32px; align-items: center; }
+.doc-photo { overflow: hidden; border-radius: var(--r-media); background: var(--c2-soft); aspect-ratio: 1 / 1; }
+.doc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+.doc-initials { display: grid; place-items: center; width: 100%; height: 100%; color: var(--c1-ink); font-size: 4rem; font-weight: 700; letter-spacing: -.04em; }
+.doc-role { margin-top: 6px; color: var(--c1-ink); font-weight: 600; }
+.doc-desc { margin-top: 16px; color: var(--muted); font-size: 1.0625rem; max-width: 56ch; }
+.doc-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+.fact { display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-card); }
+.fact-num { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); font-weight: 700; letter-spacing: -.03em; color: var(--c1-ink); line-height: 1.15; overflow-wrap: anywhere; }
+.fact-label { color: var(--muted); font-size: .875rem; line-height: 1.35; }
+.fact a { margin-top: 6px; color: var(--c1-ink); font-size: .875rem; font-weight: 600; line-height: 1.4; text-underline-offset: 3px; }
+.fact a .ico { width: 15px; height: 15px; margin-left: 4px; vertical-align: -2px; }
+.doc-list { display: grid; gap: 10px; margin-top: 24px; }
+.doc-list li { display: flex; gap: 10px; align-items: flex-start; }
+.doc-list .ico { width: 20px; height: 20px; margin-top: 2px; color: var(--c1-ink); stroke-width: 2.25; }
+
+/* ==================== CITA ==================== */
+.booking { background: var(--c1-soft); }
+.booking-grid { display: grid; gap: 28px; align-items: start; }
+/* Sin esto, la fila de días (scroll horizontal) ensancha la columna. */
+.hero-grid > *, .doc-grid > *, .booking-grid > *, .loc-grid > * { min-width: 0; }
+.booking-points { display: grid; gap: 12px; margin-top: 24px; }
+.booking-points li { display: flex; gap: 10px; align-items: flex-start; }
+.booking-points .ico { width: 20px; height: 20px; margin-top: 2px; color: var(--c1-ink); stroke-width: 2.25; }
+.booking-call { margin-top: 24px; color: var(--muted); }
+.booking-call a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--ink); font-weight: 700; font-size: 1.125rem; text-decoration: none; }
+.booking-call a .ico { color: var(--c1-ink); }
+.booking-call a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.form-card { padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-media); box-shadow: var(--shadow); }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; margin: 0 0 22px; padding: 0; border: 0; }
+.field > label, .field > legend { padding: 0; font-weight: 600; font-size: .9375rem; }
+.field > legend { margin-bottom: 8px; }
+.help { color: var(--muted); font-size: .8125rem; }
+.field input[type="text"], .field input[type="tel"], .field select {
+  width: 100%; min-height: 50px; padding: 0 14px;
+  background: #fff; border: 1px solid var(--field); border-radius: var(--r-ctl);
+  font-size: 1rem; transition: border-color .2s, box-shadow .2s;
+}
+.field select {
+  appearance: none; -webkit-appearance: none; padding-right: 44px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A5B63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6l6 -6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 20px;
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--c1-ink); box-shadow: 0 0 0 3px var(--c1-soft), 0 0 0 5px var(--c1-ink); }
+.field-row { display: grid; gap: 0 16px; }
+
+/* Chips de día y hora: radios reales, accesibles con teclado */
+.chip { position: relative; display: block; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--field); border-radius: var(--r-ctl); background: #fff;
+  font-weight: 600; transition: background-color .15s, border-color .15s, color .15s;
+}
+.chip:hover span { border-color: var(--c1-ink); background: var(--c1-soft); }
+.chip input:checked + span { background: var(--c1-ink); border-color: var(--c1-ink); color: #fff; }
+.chip input:focus-visible + span { outline: 3px solid var(--c1-ink); outline-offset: 2px; }
+.days { display: flex; gap: 8px; overflow-x: auto; padding: 4px 4px 10px; margin: -4px -4px 0; scroll-snap-type: x proximity; scrollbar-width: thin; }
+.chip-day { flex: none; scroll-snap-align: start; }
+.chip-day span { flex-direction: column; width: 64px; height: 78px; gap: 1px; line-height: 1.1; }
+.chip-day small { font-size: .75rem; font-weight: 500; text-transform: capitalize; }
+.chip-day strong { font-size: 1.375rem; letter-spacing: -.02em; }
+.chip-day input:checked + span small { color: #fff; }
+.times-group + .times-group { margin-top: 14px; }
+.times-label { margin-bottom: 8px; color: var(--muted); font-size: .8125rem; font-weight: 600; }
+.times { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
+.chip-time span { min-height: 44px; font-size: .9375rem; }
+.hint { padding: 14px 16px; border: 1px dashed var(--field); border-radius: var(--r-ctl); color: var(--muted); font-size: .9375rem; }
+
+.err { display: none; align-items: center; gap: 6px; color: var(--danger); font-size: .875rem; font-weight: 600; }
+.has-error .err { display: flex; }
+.has-error input[type="text"], .has-error input[type="tel"], .has-error select { border-color: var(--danger); }
+.has-error .chip span, .has-error .hint { border-color: var(--danger); }
+.form-note { margin-top: 12px; color: var(--muted); font-size: .8125rem; text-align: center; }
+.form-status:empty { display: none; }
+.form-status { margin-top: 16px; padding: 14px 16px; border-radius: var(--r-ctl); background: var(--c2-soft); font-size: .9375rem; font-weight: 500; }
+.form-status a { color: var(--c1-ink); font-weight: 700; }
+
+/* ==================== OPINIONES ==================== */
+.quotes {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 380px); gap: 12px;
+  overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 16px 12px; margin: -4px -16px 0; scroll-padding-inline: 16px;
+}
+.quote { scroll-snap-align: start; display: flex; flex-direction: column; gap: 18px; padding: 24px; background: var(--soft); border-radius: var(--r-card); }
+.quote-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.stars { display: inline-flex; gap: 2px; color: var(--c1-ink); }
+.stars svg { width: 18px; height: 18px; fill: currentColor; }
+.badge { padding: 4px 10px; border: 1px solid var(--line); border-radius: var(--r-pill); background: #fff; color: var(--muted); font-size: .75rem; font-weight: 600; }
+.quote blockquote { margin: 0; flex: 1; font-size: 1.0625rem; line-height: 1.55; }
+.quote-by { display: flex; align-items: center; gap: 12px; }
+.avatar { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--c2-soft); color: var(--c1-ink); font-weight: 700; font-size: .875rem; }
+.quote-by strong { display: block; font-size: .9375rem; }
+.quote-by span span { display: block; color: var(--muted); font-size: .8125rem; }
+
+/* ==================== PREGUNTAS ==================== */
+.faq { max-width: 760px; margin-inline: auto; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 64px; padding: 16px 4px; cursor: pointer; list-style: none;
+  font-weight: 600; font-size: 1.0625rem; line-height: 1.35;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--c1-ink); }
+.faq summary .ico { color: var(--c1-ink); transition: transform .25s var(--ease); }
+.faq details[open] summary .ico { transform: rotate(180deg); }
+.faq .answer { padding: 0 4px 22px; color: var(--muted); max-width: 64ch; }
+
+/* ==================== UBICACIÓN ==================== */
+.loc-grid { display: grid; gap: 16px; }
+.map { overflow: hidden; min-height: 300px; border: 1px solid var(--line); border-radius: var(--r-media); background: var(--soft); }
+.map iframe { display: block; width: 100%; height: 100%; min-height: 300px; border: 0; }
+.loc-card { display: flex; flex-direction: column; gap: 22px; padding: 24px; border: 1px solid var(--line); border-radius: var(--r-media); }
+.status { display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; padding: 6px 12px; border-radius: var(--r-pill); background: var(--soft); color: var(--muted); font-size: .875rem; font-weight: 600; }
+.status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--field); }
+.status.is-open { background: var(--c2-soft); color: var(--ink); }
+.status.is-open .dot { background: var(--c1-ink); }
+.loc-row { display: grid; grid-template-columns: 22px 1fr; gap: 14px; }
+.loc-row > .ico { margin-top: 2px; color: var(--c1-ink); }
+.loc-row h3 { margin-bottom: 4px; font-size: 1rem; letter-spacing: 0; }
+.loc-row p { color: var(--muted); }
+.link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--c1-ink); font-weight: 600; text-underline-offset: 3px; }
+.link .ico { width: 16px; height: 16px; }
+.hours { display: grid; gap: 4px; margin: 0; color: var(--muted); font-size: .9375rem; }
+.hours div { display: flex; justify-content: space-between; gap: 12px; }
+.hours dt, .hours dd { margin: 0; }
+.hours dd { text-align: right; }
+.hours .today { color: var(--ink); font-weight: 700; }
+.loc-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.loc-ctas .btn { flex: 1 1 auto; }
+.plain-link { color: var(--ink); font-weight: 600; text-decoration: none; }
+.plain-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ==================== FOOTER ==================== */
+.site-footer { padding: 56px 0 112px; background: var(--night); color: #C7D3D8; font-size: .9375rem; }
+.foot-grid { display: grid; gap: 36px; }
+.site-footer .brand { color: #fff; }
+.site-footer .brand-mark { background: var(--c1); }
+.foot-about p { margin-top: 14px; max-width: 34ch; }
+.foot-h { margin-bottom: 12px; color: #fff; font-size: .9375rem; letter-spacing: 0; }
+.foot-list { display: grid; gap: 8px; }
+.foot-list a { color: #fff; text-decoration: none; }
+.foot-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-footer .hours { color: #C7D3D8; font-size: .875rem; }
+.site-footer .hours .today { color: #fff; }
+.social { display: flex; gap: 8px; margin-top: 18px; }
+.social a { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgb(255 255 255 / .16); border-radius: 50%; color: #fff; transition: background-color .2s; }
+.social a:hover { background: rgb(255 255 255 / .1); }
+.social .ico { width: 20px; height: 20px; }
+.foot-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 44px; padding-top: 20px; border-top: 1px solid rgb(255 255 255 / .12); color: #9FB0B7; font-size: .8125rem; }
+.foot-bottom a { color: #fff; }
+
+/* ==================== WHATSAPP FLOTANTE ==================== */
+.wa-float {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 30;
+  display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%;
+  background: var(--wa); color: #fff; box-shadow: 0 10px 28px -8px rgb(15 30 36 / .45);
+  transition: transform .2s var(--ease);
+}
+.wa-float:hover { transform: translateY(-2px) scale(1.04); }
+.wa-float .ico { width: 30px; height: 30px; stroke-width: 1.75; }
+
+/* ==================== ANIMACIONES ==================== */
+/* Solo si el navegador no pide reducir movimiento y el JS está activo. */
+@media (prefers-reduced-motion: no-preference) {
+  .anim .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+  .anim .reveal.in { opacity: 1; transform: none; }
+  .anim .hero-copy > *, .anim .hero-media { animation: subir .8s var(--ease) both; }
+  .anim .hero-copy > :nth-child(2) { animation-delay: .06s; }
+  .anim .hero-copy > :nth-child(3) { animation-delay: .12s; }
+  .anim .hero-copy > :nth-child(4) { animation-delay: .18s; }
+  .anim .hero-media { animation-delay: .15s; }
+  .anim .wa-float { animation: aparecer .5s .6s var(--ease) both; }
+  .faq details[open] .answer { animation: subir .4s var(--ease); }
+}
+@keyframes subir { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes aparecer { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+
+/* ==================== RESPONSIVE (mobile first) ==================== */
+@media (min-width: 640px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .field-row { grid-template-columns: 1fr 1fr; }
+  .form-card { padding: 32px; }
+  .hero-ctas .btn { flex: 0 0 auto; }
+}
+@media (min-width: 768px) {
+  .section { padding: 104px 0; }
+  .after-facts { padding-top: 144px; }
+  .header-cta { display: inline-flex; }
+  .facts { grid-template-columns: repeat(4, 1fr); padding: 22px 28px; }
+  .facts li { font-size: .9375rem; }
+  .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .site-footer { padding-bottom: 40px; }
+  .wa-float { right: 24px; bottom: 24px; width: 62px; height: 62px; }
+  .quotes { grid-auto-flow: row; grid-template-columns: 1.15fr 1fr; overflow: visible; padding: 0; margin: 0; }
+  .quote-main { grid-row: span 2; justify-content: space-between; }
+  .quote-main blockquote { font-size: clamp(1.25rem, 1rem + .9vw, 1.625rem); line-height: 1.4; letter-spacing: -.01em; }
+}
+@media (min-width: 960px) {
+  .hero { padding-top: 56px; }
+  .hero-grid { grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  .hero-media { margin-right: 16px; }
+  .hero-media::before { transform: translate(16px, 16px); }
+  .hero-media img, .hero-fallback { aspect-ratio: 1 / 1; }
+  .doc-grid { grid-template-columns: 5fr 7fr; gap: 64px; }
+  .doc-photo { aspect-ratio: 4 / 5; }
+  .booking-grid { grid-template-columns: 5fr 7fr; gap: 56px; }
+  .booking-aside { position: sticky; top: calc(var(--header) + 32px); }
+  .loc-grid { grid-template-columns: 7fr 5fr; gap: 24px; }
+  .map, .map iframe { min-height: 100%; }
+}
+@media (min-width: 1024px) {
+  .nav { display: block; }
+  .nav ul { display: flex; gap: 2px; }
+  .nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: var(--r-pill); color: var(--muted); font-size: .9375rem; font-weight: 500; text-decoration: none; }
+  .nav a:hover { background: var(--soft); color: var(--ink); }
+}
+/* Servicios en 4 columnas solo cuando caben precio y enlace en una línea */
+@media (min-width: 1180px) {
+  .svc-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .svc { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+  .svc h3 { align-self: auto; }
+  .svc-ico { margin-bottom: 8px; }
+  .svc p { flex: 1; }
+  .svc-foot { padding-top: 12px; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript>
+  <p style="padding:24px;font-family:system-ui,sans-serif">Activa JavaScript para ver esta página. Turn on JavaScript to view this page.</p>
+</noscript>
+
+<script>
+/* =====================================================================
+   Motor de la página. Arma todo a partir de CONFIG; no hace falta
+   editar nada de aquí para cambiar de consultorio.
+   ===================================================================== */
+(function () {
+  "use strict";
+  const C = CONFIG;
+  const app = document.getElementById("app");
+  const IDIOMAS = (C.idiomas && C.idiomas.length ? C.idiomas : ["es"]).filter((l) => C.textos[l]);
+  const LOCALES = { es: "es-MX", en: "en-US" };
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let lang = elegirIdioma();
+  let T = C.textos[lang];
+  let primeraVez = true;
+
+  /* Íconos: Tabler Icons (MIT), https://tabler.io/icons */
+  const ICONOS = {
+    diente: '<path d="M12 5.5c-1.074 -.586 -2.583 -1.5 -4 -1.5c-2.1 0 -4 1.247 -4 5c0 4.899 1.056 8.41 2.671 10.537c.573 .756 1.97 .521 2.567 -.236c.398 -.505 .819 -1.439 1.262 -2.801c.292 -.771 .892 -1.504 1.5 -1.5c.602 0 1.21 .737 1.5 1.5c.443 1.362 .864 2.295 1.262 2.8c.597 .759 2 .993 2.567 .237c1.615 -2.127 2.671 -5.637 2.671 -10.537c0 -3.74 -1.908 -5 -4 -5c-1.423 0 -2.92 .911 -4 1.5z"/><path d="M12 5.5l3 1.5"/>',
+    "diente-roto": '<path d="M12 5.5c-1.074 -.586 -2.583 -1.5 -4 -1.5c-2.1 0 -4 1.247 -4 5c0 4.899 1.056 8.41 2.671 10.537c.573 .756 1.97 .521 2.567 -.236c.398 -.505 .819 -1.439 1.262 -2.801c.292 -.771 .892 -1.504 1.5 -1.5c.602 0 1.21 .737 1.5 1.5c.443 1.362 .864 2.295 1.262 2.8c.597 .759 2 .993 2.567 .237c1.615 -2.127 2.671 -5.637 2.671 -10.537c0 -3.74 -1.908 -5 -4 -5c-1.423 0 -2.92 .911 -4 1.5z"/><path d="M12 5.5l1 2.5l-2 2l2 2"/>',
+    gota: '<path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546z"/>',
+    brillo: '<path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z"/>',
+    sonrisa: '<path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z"/><path d="M10 10c-.5 -1 -2.5 -1 -3 0"/><path d="M17 10c-.5 -1 -2.5 -1 -3 0"/><path d="M14.5 15a3.5 3.5 0 0 1 -5 0"/>',
+    implante: '<path d="M9 4v6l-2 4v2h10v-2l-2 -4v-6"/><path d="M12 16l0 5"/><path d="M8 4l8 0"/>',
+    nino: '<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M9 10l.01 0"/><path d="M15 10l.01 0"/><path d="M9.5 15a3.5 3.5 0 0 0 5 0"/><path d="M12 3a2 2 0 0 0 0 4"/>',
+    botiquin: '<path d="M8 8v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"/><path d="M4 8m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M10 14h4"/><path d="M12 12v4"/>',
+    escudo: '<path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06"/><path d="M15 19l2 2l4 -4"/>',
+    corazon: '<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/><path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"/><path d="M12.5 15.5l2 2"/><path d="M15 13l2 2"/>',
+    estetoscopio: '<path d="M6 4h-1a2 2 0 0 0 -2 2v3.5h0a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1"/><path d="M8 15a6 6 0 1 0 12 0v-3"/><path d="M11 3v2"/><path d="M6 3v2"/><path d="M20 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>',
+    verificado: '<path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1"/><path d="M9 12l2 2l4 -4"/>',
+    idioma: '<path d="M4 5h7"/><path d="M9 3v2c0 4.418 -2.239 8 -5 8"/><path d="M5 9c0 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4 -9l4 9"/><path d="M19.1 18h-6.2"/>',
+    tarjeta: '<path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 10l18 0"/><path d="M7 15l.01 0"/><path d="M11 15l2 0"/>',
+    calendario: '<path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3l0 4"/><path d="M8 3l0 4"/><path d="M4 11l16 0"/><path d="M8 15h2v2h-2z"/>',
+    reloj: '<path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/>',
+    ubicacion: '<path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/>',
+    telefono: '<path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>',
+    correo: '<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/>',
+    whatsapp: '<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>',
+    facebook: '<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/>',
+    instagram: '<path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M16.5 7.5l0 .01"/>',
+    tiktok: '<path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/>',
+    check: '<path d="M5 12l5 5l10 -10"/>',
+    flecha: '<path d="M5 12l14 0"/><path d="M13 18l6 -6"/><path d="M13 6l6 6"/>',
+    externo: '<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"/><path d="M11 13l9 -9"/><path d="M15 4h5v5"/>',
+    abajo: '<path d="M6 9l6 6l6 -6"/>',
+  };
+  const ESTRELLA = '<path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"/>';
+
+  /* ---------- Utilidades ---------- */
+  function elegirIdioma() {
+    const q = new URLSearchParams(location.search).get("lang");
+    if (q && IDIOMAS.includes(q)) return q;
+    try {
+      const s = localStorage.getItem("idioma:" + C.negocio.nombre);
+      if (s && IDIOMAS.includes(s)) return s;
+    } catch (e) { /* sin almacenamiento: se usa el idioma por defecto */ }
+    return IDIOMAS[0];
+  }
+  // Texto traducible: { es, en } o texto normal.
+  const tr = (v, l = lang) => (v == null ? "" : typeof v === "object" ? (v[l] ?? v[IDIOMAS[0]] ?? v.es ?? "") : String(v));
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  const fill = (tpl, d) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in d ? d[k] : m));
+  const ico = (n, cls = "ico") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONOS[n] || ICONOS.diente}</svg>`;
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const loc = () => LOCALES[lang] || lang;
+  const iniciales = (n) => n.replace(/^(Dra?\.|Dr\.)\s*/i, "").split(/\s+/).slice(0, 2).map((p) => p[0]).join("").toUpperCase();
+  const blank = ' target="_blank" rel="noopener"';
+  const nuevaVentana = () => `<span class="sr-only"> ${esc(T.nuevaVentana)}</span>`;
+
+  // Enlace de WhatsApp con mensaje prellenado.
+  const wa = (msg) => `https://wa.me/${String(C.contacto.whatsapp).replace(/\D/g, "")}?text=${encodeURIComponent(msg)}`;
+
+  // Fotos de Unsplash al tamaño justo; otras URLs se usan tal cual.
+  const esUnsplash = (u) => /images\.unsplash\.com/.test(u || "");
+  const foto = (u, w) => (esUnsplash(u) ? `${u.split("?")[0]}?auto=format&fit=crop&w=${w}&q=70` : u);
+  const srcset = (u, ws) => (esUnsplash(u) ? ` srcset="${ws.map((w) => `${foto(u, w)} ${w}w`).join(", ")}"` : "");
+
+  /* ---------- Fechas y horario (en la zona horaria del consultorio) ---------- */
+  const aMin = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return h * 60 + (m || 0); };
+  // Español: 24 h ("9:00", "16:30"). Inglés: 12 h ("4:30 PM").
+  function fmtHora(min) {
+    const h = Math.floor(min / 60), m = String(min % 60).padStart(2, "0");
+    if (lang !== "en") return `${h}:${m}`;
+    return `${h % 12 || 12}:${m} ${h < 12 ? "AM" : "PM"}`;
+  }
+  // 0 = domingo. El 7 de enero de 2024 fue domingo.
+  const nombreDia = (d) => new Intl.DateTimeFormat(loc(), { weekday: "long", timeZone: "UTC" }).format(Date.UTC(2024, 0, 7 + d));
+  const isoAFecha = (iso) => { const [y, m, d] = iso.split("-").map(Number); return new Date(Date.UTC(y, m - 1, d)); };
+  const sumarDias = (iso, n) => { const f = isoAFecha(iso); f.setUTCDate(f.getUTCDate() + n); return f.toISOString().slice(0, 10); };
+  const diaSemana = (iso) => isoAFecha(iso).getUTCDay();
+  const fechaLarga = (iso) => new Intl.DateTimeFormat(loc(), { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" }).format(isoAFecha(iso));
+
+  function ahora() {
+    const p = {};
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone: C.ubicacion.zonaHoraria || undefined,
+      year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+    }).formatToParts(new Date()).forEach((x) => { p[x.type] = x.value; });
+    return { iso: `${p.year}-${p.month}-${p.day}`, min: (Number(p.hour) % 24) * 60 + Number(p.minute) };
+  }
+  function bloques(dow) {
+    const r = [];
+    (C.horario || []).forEach((h) => { if (h.dias.includes(dow)) h.horas.forEach(([a, b]) => r.push([aMin(a), aMin(b)])); });
+    return r.sort((x, y) => x[0] - y[0]);
+  }
+  function horasDisponibles(iso) {
+    const paso = C.cita.intervaloMinutos || 30;
+    const ya = ahora();
+    const limite = iso === ya.iso ? ya.min + (C.cita.anticipacionMinutos || 0) : -1;
+    const out = [];
+    bloques(diaSemana(iso)).forEach(([a, b]) => {
+      for (let m = a; m + paso <= b; m += paso) if (m >= limite) out.push({ m, grupo: a < 720 ? "manana" : "tarde" });
+    });
+    return out;
+  }
+  function proximosDias() {
+    const hoy = ahora().iso;
+    const out = [];
+    for (let k = 0; out.length < (C.cita.diasMostrados || 12) && k < 90; k++) {
+      const iso = sumarDias(hoy, k);
+      if (horasDisponibles(iso).length) out.push(iso);
+    }
+    return out;
+  }
+  function estadoAhora() {
+    const U = T.ubicacion;
+    const ya = ahora();
+    const dow = diaSemana(ya.iso);
+    for (const [a, b] of bloques(dow)) {
+      if (ya.min >= a && ya.min < b) return { abierto: true, texto: `${U.abierto} · ${fill(U.cierra, { hora: fmtHora(b) })}` };
+    }
+    for (let k = 0; k < 8; k++) {
+      const d = (dow + k) % 7;
+      const sig = bloques(d).find(([a]) => k > 0 || a > ya.min);
+      if (sig) {
+        const cuando = k === 0 ? U.hoy : k === 1 ? U.manana : fill(U.elDia, { dia: nombreDia(d) });
+        return { abierto: false, texto: `${U.cerrado} · ${fill(U.abre, { cuando, hora: fmtHora(sig[0]) })}` };
+      }
+    }
+    return { abierto: false, texto: U.cerrado };
+  }
+  // Agrupa días seguidos con el mismo horario: "Lunes a viernes", "Sábado", "Domingo".
+  function horarioAgrupado() {
+    const U = T.ubicacion;
+    const hoy = diaSemana(ahora().iso);
+    const grupos = [];
+    [1, 2, 3, 4, 5, 6, 0].forEach((d) => {
+      const b = bloques(d);
+      const clave = JSON.stringify(b);
+      const ult = grupos[grupos.length - 1];
+      if (ult && ult.clave === clave) ult.dias.push(d);
+      else grupos.push({ clave, dias: [d], b });
+    });
+    return grupos.map((g) => ({
+      dias: g.dias.length === 1 ? cap(nombreDia(g.dias[0])) : fill(U.rangoDias, { a: cap(nombreDia(g.dias[0])), b: nombreDia(g.dias[g.dias.length - 1]) }),
+      horas: g.b.length ? g.b.map(([a, b]) => fill(U.rangoHoras, { a: fmtHora(a), b: fmtHora(b) })) : [U.cerradoDia],
+      hoy: g.dias.includes(hoy),
+    }));
+  }
+  // Un rango por línea: "9:00 a 14:00" / "16:00 a 20:00".
+  const htmlHorario = () => `<dl class="hours">${horarioAgrupado().map((g) =>
+    `<div${g.hoy ? ' class="today"' : ""}><dt>${esc(g.dias)}</dt><dd>${g.horas.map(esc).join("<br>")}</dd></div>`).join("")}</dl>`;
+
+  /* ---------- Colores desde CONFIG, con contraste garantizado ---------- */
+  const hexARgb = (h) => { h = h.replace("#", ""); if (h.length === 3) h = [...h].map((c) => c + c).join(""); const n = parseInt(h, 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+  const rgbAHex = (c) => "#" + c.map((v) => Math.round(v).toString(16).padStart(2, "0")).join("");
+  const luz = (c) => { const a = c.map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2]; };
+  const contraste = (a, b) => { const x = luz(a), y = luz(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const mezclar = (c, con, p) => c.map((v, i) => v + (con[i] - v) * p);
+  function oscurecer(c, fondo, min) { for (let i = 0; i < 30 && contraste(c, fondo) < min; i++) c = mezclar(c, [0, 0, 0], 0.06); return c; }
+  function aplicarColores() {
+    const W = [255, 255, 255];
+    const c1 = hexARgb(C.colores.principal);
+    const c2 = hexARgb(C.colores.secundario || C.colores.principal);
+    const c1Soft = mezclar(c1, W, 0.92);
+    const ink = oscurecer(c1, c1Soft, 4.6); // legible sobre blanco y sobre el fondo suave
+    const s = document.documentElement.style;
+    s.setProperty("--c1", rgbAHex(c1));
+    s.setProperty("--c1-ink", rgbAHex(ink));
+    s.setProperty("--c1-ink-hover", rgbAHex(mezclar(ink, [0, 0, 0], 0.18)));
+    s.setProperty("--c1-soft", rgbAHex(c1Soft));
+    s.setProperty("--c1-line", rgbAHex(mezclar(c1, W, 0.6)));
+    s.setProperty("--c2", rgbAHex(c2));
+    s.setProperty("--c2-soft", rgbAHex(mezclar(c2, W, 0.78)));
+    document.querySelector('meta[name="theme-color"]').content = rgbAHex(ink);
+    if (!C.negocio.logo) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="${rgbAHex(ink)}"/><g transform="translate(4 4)" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONOS.diente}</g></svg>`;
+      document.getElementById("favicon").href = "data:image/svg+xml," + encodeURIComponent(svg);
+    } else {
+      document.getElementById("favicon").href = C.negocio.logo;
+    }
+  }
+
+  /* ---------- Secciones ---------- */
+  function marca() {
+    const logo = C.negocio.logo
+      ? `<img class="brand-logo" src="${esc(C.negocio.logo)}" alt="" height="36">`
+      : `<span class="brand-mark" aria-hidden="true">${ico("diente")}</span>`;
+    return `<a class="brand" href="#inicio">${logo}<span>${esc(C.negocio.nombre)}</span></a>`;
+  }
+
+  function franjaDemo() {
+    if (!C.showDemoBanner) return "";
+    const b = C.demoBanner || {};
+    return `<div class="demo-bar"><p>${esc(tr(b.texto))} <a href="${esc(b.url)}"${blank}>${esc(b.autor)}${nuevaVentana()}</a></p></div>`;
+  }
+
+  function enlacesMenu() {
+    const n = T.nav;
+    return [
+      ["servicios", n.servicios],
+      ["doctora", tr(C.doctor.menu)],
+      (C.testimonios?.lista || []).length && ["opiniones", n.opiniones],
+      (C.faq || []).length && ["preguntas", n.preguntas],
+      ["ubicacion", n.ubicacion],
+    ].filter(Boolean);
+  }
+
+  function encabezado() {
+    const idiomas = IDIOMAS.length < 2 ? "" :
+      `<div class="lang" role="group" aria-label="${esc(T.idioma)}">${IDIOMAS.map((l) =>
+        `<button type="button" class="lang-btn" data-lang="${l}" lang="${l}" aria-pressed="${l === lang}" aria-label="${{ es: "Español", en: "English" }[l] || l}">${l.toUpperCase()}</button>`).join("")}</div>`;
+    return `
+      <header class="site-header">
+        <div class="wrap header-in">
+          ${marca()}
+          <nav class="nav" aria-label="${esc(T.menu)}"><ul>${enlacesMenu().map(([id, txt]) => `<li><a href="#${id}">${esc(txt)}</a></li>`).join("")}</ul></nav>
+          <div class="header-actions">
+            ${idiomas}
+            <a class="btn btn-primary btn-sm header-cta" href="#cita">${esc(T.agendar)}</a>
+          </div>
+        </div>
+      </header>`;
+  }
+
+  function portada() {
+    const N = C.negocio, U = C.ubicacion, H = C.hero;
+    const visual = H.imagen
+      ? `<img src="${esc(foto(H.imagen, 1000))}"${srcset(H.imagen, [600, 900, 1200, 1600])} sizes="(min-width: 960px) 46vw, 100vw" alt="${esc(tr(H.alt))}" width="1200" height="1200" fetchpriority="high">`
+      : `<div class="hero-fallback">${ico("diente")}</div>`;
+    const datos = { cedula: C.doctor.cedula, anos: C.doctor.anosExperiencia };
+    return `
+      <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">${ico("ubicacion")}${esc(fill(T.hero.linea, { tipo: tr(N.tipo), ciudad: U.ciudad, estado: U.estado }))}</p>
+            <h1 id="hero-titulo">${esc(N.nombre)}</h1>
+            <p class="lead">${esc(tr(N.eslogan))}</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-lg" href="#cita">${ico("calendario")}${esc(T.agendar)}</a>
+              <a class="btn btn-ghost btn-lg" href="${esc(wa(tr(C.contacto.mensajeWhatsApp)))}"${blank}>${ico("whatsapp")}${esc(T.whatsapp)}${nuevaVentana()}</a>
+            </div>
+          </div>
+          <div class="hero-media">${visual}</div>
+        </div>
+        ${(C.destacados || []).length ? `<div class="wrap"><ul class="facts">${C.destacados.map((d) =>
+          `<li>${ico(d.icono)}<span>${esc(fill(tr(d.texto), datos))}</span></li>`).join("")}</ul></div>` : ""}
+      </section>`;
+  }
+
+  function servicios() {
+    const dinero = (n) => new Intl.NumberFormat(loc(), { style: "currency", currency: C.moneda || "MXN", maximumFractionDigits: 0 }).format(n);
+    const conPrecio = C.servicios.some((s) => s.precio);
+    return `
+      <section class="section soft ${(C.destacados || []).length ? "after-facts" : ""}" id="servicios" aria-labelledby="servicios-titulo">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 class="title" id="servicios-titulo">${esc(T.servicios.titulo)}</h2>
+            <p class="lead">${esc(T.servicios.intro)}</p>
+          </div>
+          <ul class="svc-grid">${C.servicios.map((s, i) => `
+            <li class="svc reveal" style="--i:${i % 4}">
+              <span class="svc-ico">${ico(s.icono)}</span>
+              <h3>${esc(tr(s.nombre))}</h3>
+              <p>${esc(tr(s.descripcion))}</p>
+              <div class="svc-foot">
+                ${s.precio ? `<span class="price">${esc(fill(T.servicios.desde, { precio: dinero(s.precio) }))}</span>` : ""}
+                <a class="svc-link" href="#cita" data-servicio="${i}">${esc(T.servicios.agendar)}<span class="sr-only">: ${esc(tr(s.nombre))}</span>${ico("flecha")}</a>
+              </div>
+            </li>`).join("")}
+          </ul>
+          ${conPrecio ? `<p class="svc-note">${esc(T.servicios.nota)}</p>` : ""}
+        </div>
+      </section>`;
+  }
+
+  function doctora() {
+    const D = C.doctor;
+    const retrato = D.foto
+      ? `<img src="${esc(foto(D.foto, 900))}"${srcset(D.foto, [500, 800, 1100])} sizes="(min-width: 960px) 38vw, 100vw" alt="${esc(fill(T.doctor.fotoAlt, { nombre: D.nombre }))}" width="800" height="1000" loading="lazy" decoding="async">`
+      : `<div class="doc-initials" aria-hidden="true">${esc(iniciales(D.nombre))}</div>`;
+    return `
+      <section class="section" id="doctora" aria-labelledby="doctora-titulo">
+        <div class="wrap doc-grid">
+          <div class="doc-photo reveal">${retrato}</div>
+          <div class="doc-copy reveal" style="--i:1">
+            <p class="kicker">${esc(tr(D.seccion))}</p>
+            <h2 class="title" id="doctora-titulo">${esc(D.nombre)}</h2>
+            <p class="doc-role">${esc(tr(D.titulo))}</p>
+            <p class="doc-desc">${esc(tr(D.descripcion))}</p>
+            <div class="doc-facts">
+              ${D.anosExperiencia ? `<div class="fact"><span class="fact-num">${esc(D.anosExperiencia)}</span><span class="fact-label">${esc(T.doctor.experiencia)}</span></div>` : ""}
+              ${D.cedula ? `<div class="fact"><span class="fact-num">${esc(D.cedula)}</span><span class="fact-label">${esc(T.doctor.cedula)}</span>
+                ${D.enlaceCedula ? `<a href="${esc(D.enlaceCedula)}"${blank}>${esc(T.doctor.verificar)}${ico("externo")}${nuevaVentana()}</a>` : ""}</div>` : ""}
+            </div>
+            ${(D.formacion || []).length ? `<ul class="doc-list">${D.formacion.map((f) => `<li>${ico("check")}<span>${esc(tr(f))}</span></li>`).join("")}</ul>` : ""}
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function agenda() {
+    const K = T.cita;
+    const err = (campo) => `<p class="err" id="e-${campo}"><span></span></p>`;
+    return `
+      <section class="section booking" id="cita" aria-labelledby="cita-titulo">
+        <div class="wrap booking-grid">
+          <div class="booking-aside reveal">
+            <h2 class="title" id="cita-titulo">${esc(K.titulo)}</h2>
+            <p class="lead">${esc(K.intro)}</p>
+            <ul class="booking-points">${K.puntos.map((p) => `<li>${ico("check")}<span>${esc(p)}</span></li>`).join("")}</ul>
+            <p class="booking-call">${esc(K.llamar)}<br><a href="tel:${esc(C.contacto.telefono)}">${ico("telefono")}${esc(C.contacto.telefonoVisible)}</a></p>
+          </div>
+          <form class="form-card reveal" id="form-cita" novalidate style="--i:1">
+            <div class="field" data-campo="servicio">
+              <label for="f-servicio">${esc(K.servicio)}</label>
+              <select id="f-servicio" name="servicio" aria-describedby="e-servicio">
+                <option value="">${esc(K.elegirServicio)}</option>
+                ${C.servicios.map((s, i) => `<option value="${i}">${esc(tr(s.nombre))}</option>`).join("")}
+              </select>
+              ${err("servicio")}
+            </div>
+            <fieldset class="field" data-campo="fecha" aria-describedby="e-fecha">
+              <legend>${esc(K.fecha)}</legend>
+              <div class="days">${htmlDias()}</div>
+              ${err("fecha")}
+            </fieldset>
+            <fieldset class="field" data-campo="hora" aria-describedby="e-hora">
+              <legend>${esc(K.hora)}</legend>
+              <div id="horas">${htmlHoras("")}</div>
+              ${err("hora")}
+            </fieldset>
+            <div class="field-row">
+              <div class="field" data-campo="nombre">
+                <label for="f-nombre">${esc(K.nombre)}</label>
+                <input type="text" id="f-nombre" name="nombre" autocomplete="name" aria-describedby="e-nombre">
+                ${err("nombre")}
+              </div>
+              <div class="field" data-campo="telefono">
+                <label for="f-telefono">${esc(K.telefono)}</label>
+                <input type="tel" id="f-telefono" name="telefono" autocomplete="tel" inputmode="tel" aria-describedby="a-telefono e-telefono">
+                <p class="help" id="a-telefono">${esc(K.telefonoAyuda)}</p>
+                ${err("telefono")}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">${ico("whatsapp")}${esc(K.enviar)}</button>
+            <p class="form-note">${esc(K.nota)}</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>`;
+  }
+
+  function htmlDias() {
+    const hoy = ahora().iso;
+    const corto = (o) => new Intl.DateTimeFormat(loc(), { ...o, timeZone: "UTC" });
+    const fDia = corto({ weekday: "short" }), fMes = corto({ month: "short" });
+    return proximosDias().map((iso) => {
+      const f = isoAFecha(iso);
+      const dia = iso === hoy ? T.cita.hoy : fDia.format(f).replace(".", "");
+      return `<label class="chip chip-day"><input type="radio" name="fecha" value="${iso}" aria-label="${esc(cap(fechaLarga(iso)))}"><span><small>${esc(dia)}</small><strong>${f.getUTCDate()}</strong><small>${esc(fMes.format(f).replace(".", ""))}</small></span></label>`;
+    }).join("");
+  }
+
+  function htmlHoras(iso) {
+    if (!iso) return `<p class="hint">${esc(T.cita.eligeDia)}</p>`;
+    const horas = horasDisponibles(iso);
+    if (!horas.length) return `<p class="hint">${esc(T.cita.sinHoras)}</p>`;
+    const grupos = {};
+    horas.forEach((h) => (grupos[h.grupo] = grupos[h.grupo] || []).push(h));
+    return Object.keys(grupos).map((g) => `
+      <div class="times-group">
+        <p class="times-label">${esc(T.cita[g])}</p>
+        <div class="times">${grupos[g].map((h) => `<label class="chip chip-time"><input type="radio" name="hora" value="${h.m}"><span>${esc(fmtHora(h.m))}</span></label>`).join("")}</div>
+      </div>`).join("");
+  }
+
+  function opiniones() {
+    const O = C.testimonios || {};
+    const lista = O.lista || [];
+    if (!lista.length) return "";
+    const estrellas = (n) => `<span class="stars" role="img" aria-label="${esc(fill(T.opiniones.estrellas, { n }))}">${Array.from({ length: n }, () => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ESTRELLA}</svg>`).join("")}</span>`;
+    return `
+      <section class="section" id="opiniones" aria-labelledby="opiniones-titulo">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 class="title" id="opiniones-titulo">${esc(T.opiniones.titulo)}</h2>
+            ${O.sonEjemplo ? `<p class="lead">${esc(T.opiniones.aviso)}</p>` : ""}
+          </div>
+          <ul class="quotes">${lista.map((q, i) => `
+            <li class="quote reveal${i === 0 ? " quote-main" : ""}" style="--i:${i}">
+              <div class="quote-top">${estrellas(q.estrellas || 5)}${O.sonEjemplo ? `<span class="badge">${esc(T.opiniones.ejemplo)}</span>` : ""}</div>
+              <blockquote><p>“${esc(tr(q.texto))}”</p></blockquote>
+              <div class="quote-by"><span class="avatar" aria-hidden="true">${esc(iniciales(q.nombre))}</span><span><strong>${esc(q.nombre)}</strong><span>${esc(tr(q.detalle))}</span></span></div>
+            </li>`).join("")}
+          </ul>
+        </div>
+      </section>`;
+  }
+
+  function preguntas() {
+    if (!(C.faq || []).length) return "";
+    return `
+      <section class="section soft" id="preguntas" aria-labelledby="preguntas-titulo">
+        <div class="wrap">
+          <div class="section-head center reveal"><h2 class="title" id="preguntas-titulo">${esc(T.faq.titulo)}</h2></div>
+          <div class="faq reveal">${C.faq.map((f) => `
+            <details name="faq">
+              <summary>${esc(tr(f.pregunta))}${ico("abajo")}</summary>
+              <div class="answer"><p>${esc(tr(f.respuesta))}</p></div>
+            </details>`).join("")}
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function ubicacion() {
+    const U = C.ubicacion, K = C.contacto, L = T.ubicacion;
+    const busqueda = U.mapaBusqueda || `${U.calle}, ${U.colonia}, ${U.ciudad}, ${U.estado}`;
+    const mapa = U.mapaEmbed || `https://maps.google.com/maps?q=${encodeURIComponent(busqueda)}&z=16&hl=${lang}&output=embed`;
+    const enlaceMapa = U.mapsLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(busqueda)}`;
+    const est = estadoAhora();
+    return `
+      <section class="section" id="ubicacion" aria-labelledby="ubicacion-titulo">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 class="title" id="ubicacion-titulo">${esc(L.titulo)}</h2>
+            ${U.referencias ? `<p class="lead">${esc(tr(U.referencias))}</p>` : ""}
+          </div>
+          <div class="loc-grid">
+            <div class="map reveal"><iframe src="${esc(mapa)}" title="${esc(fill(L.mapa, { nombre: C.negocio.nombre }))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            <div class="loc-card reveal" style="--i:1">
+              <p class="status${est.abierto ? " is-open" : ""}"><span class="dot" aria-hidden="true"></span>${esc(est.texto)}</p>
+              <div class="loc-row">${ico("ubicacion")}<div>
+                <h3>${esc(L.direccion)}</h3>
+                <p>${esc(U.calle)}, ${esc(U.colonia)}<br>${esc(U.codigoPostal)} ${esc(U.ciudad)}, ${esc(U.estado)}</p>
+                <a class="link" href="${esc(enlaceMapa)}"${blank}>${esc(L.abrirMapa)}${ico("externo")}${nuevaVentana()}</a>
+              </div></div>
+              <div class="loc-row">${ico("reloj")}<div><h3>${esc(L.horario)}</h3>${htmlHorario()}</div></div>
+              <div class="loc-row">${ico("telefono")}<div>
+                <h3>${esc(L.contacto)}</h3>
+                <p><a class="plain-link" href="tel:${esc(K.telefono)}">${esc(K.telefonoVisible)}</a></p>
+                ${K.correo ? `<p><a class="plain-link" href="mailto:${esc(K.correo)}">${esc(K.correo)}</a></p>` : ""}
+              </div></div>
+              <div class="loc-ctas">
+                <a class="btn btn-primary" href="#cita">${esc(T.agendar)}</a>
+                <a class="btn btn-ghost" href="${esc(wa(tr(K.mensajeWhatsApp)))}"${blank}>${ico("whatsapp")}${esc(T.whatsapp)}${nuevaVentana()}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function pie() {
+    const U = C.ubicacion, K = C.contacto, F = T.footer, R = C.redes || {}, D = C.doctor;
+    const redes = ["facebook", "instagram", "tiktok"].filter((r) => R[r]);
+    const cr = C.credito;
+    return `
+      <footer class="site-footer">
+        <div class="wrap">
+          <div class="foot-grid">
+            <div class="foot-about">
+              ${marca()}
+              <p>${esc(tr(C.negocio.eslogan))}</p>
+              ${redes.length ? `<div class="social">${redes.map((r) => `<a href="${esc(R[r])}"${blank} aria-label="${cap(r)} ${esc(T.nuevaVentana)}">${ico(r)}</a>`).join("")}</div>` : ""}
+            </div>
+            <div>
+              <h2 class="foot-h">${esc(F.contacto)}</h2>
+              <ul class="foot-list">
+                <li>${esc(U.calle)}, ${esc(U.colonia)}, ${esc(U.ciudad)}</li>
+                <li><a href="tel:${esc(K.telefono)}">${esc(K.telefonoVisible)}</a></li>
+                <li><a href="${esc(wa(tr(K.mensajeWhatsApp)))}"${blank}>${esc(T.whatsapp)}${nuevaVentana()}</a></li>
+                ${K.correo ? `<li><a href="mailto:${esc(K.correo)}">${esc(K.correo)}</a></li>` : ""}
+              </ul>
+            </div>
+            <div>
+              <h2 class="foot-h">${esc(F.horario)}</h2>
+              ${htmlHorario()}
+            </div>
+          </div>
+          <div class="foot-bottom">
+            <p>© ${new Date().getFullYear()} ${esc(C.negocio.nombre)}. ${esc(D.nombre)}, ${esc(T.doctor.cedula.toLowerCase())} ${esc(D.cedula)}.</p>
+            ${cr ? `<p>${esc(tr(cr.texto))} <a href="${esc(cr.url)}"${blank}>${esc(cr.nombre)}${nuevaVentana()}</a></p>` : ""}
+          </div>
+        </div>
+      </footer>`;
+  }
+
+  const flotante = () =>
+    `<a class="wa-float" href="${esc(wa(tr(C.contacto.mensajeWhatsApp)))}"${blank} aria-label="${esc(T.whatsappFlotante)} ${esc(T.nuevaVentana)}">${ico("whatsapp")}</a>`;
+
+  /* ---------- Formulario de cita ---------- */
+  const form = () => document.getElementById("form-cita");
+  function leerForm() {
+    const f = form();
+    if (!f) return null;
+    const v = (n) => (f.elements[n] && f.elements[n].value) || "";
+    return { servicio: v("servicio"), fecha: v("fecha"), hora: v("hora"), nombre: v("nombre"), telefono: v("telefono") };
+  }
+  function marcar(f, nombre, valor) {
+    const r = [...f.querySelectorAll(`input[name="${nombre}"]`)].find((i) => i.value === valor);
+    if (r) r.checked = true;
+  }
+  function escribirForm(d) {
+    const f = form();
+    if (!f || !d) return;
+    f.elements.servicio.value = d.servicio;
+    marcar(f, "fecha", d.fecha);
+    document.getElementById("horas").innerHTML = htmlHoras(f.elements.fecha.value || "");
+    marcar(f, "hora", d.hora);
+    f.elements.nombre.value = d.nombre;
+    f.elements.telefono.value = d.telefono;
+  }
+  function ponerError(f, campo, msg) {
+    const caja = f.querySelector(`[data-campo="${campo}"]`);
+    caja.classList.toggle("has-error", !!msg);
+    caja.querySelector(".err span").textContent = msg || "";
+    caja.querySelectorAll("input, select").forEach((el) => el.toggleAttribute("aria-invalid", !!msg));
+  }
+  function enviar(e) {
+    e.preventDefault();
+    const f = e.target;
+    const d = leerForm();
+    const E = T.cita.errores;
+    const errores = {
+      servicio: d.servicio === "" ? E.servicio : "",
+      fecha: !d.fecha ? E.fecha : "",
+      hora: !d.hora ? E.hora : "",
+      nombre: d.nombre.trim().length < 2 ? E.nombre : "",
+      telefono: d.telefono.replace(/\D/g, "").length < 10 ? E.telefono : "",
+    };
+    Object.keys(errores).forEach((k) => ponerError(f, k, errores[k]));
+    const primero = Object.keys(errores).find((k) => errores[k]);
+    if (primero) {
+      const caja = f.querySelector(`[data-campo="${primero}"]`);
+      const el = caja.querySelector("input:checked, select, input");
+      if (el) el.focus();
+      else caja.scrollIntoView({ block: "center" });
+      return;
+    }
+    const s = C.servicios[Number(d.servicio)];
+    const msg = fill(T.cita.mensaje, {
+      clinica: C.negocio.nombre,
+      servicio: tr(s.nombre),
+      fecha: cap(fechaLarga(d.fecha)),
+      hora: fmtHora(Number(d.hora)),
+      nombre: d.nombre.trim(),
+      telefono: d.telefono.trim(),
+    });
+    const url = wa(msg);
+    const ventana = window.open(url, "_blank");
+    if (ventana) ventana.opener = null;
+    else location.href = url;
+    f.querySelector(".form-status").innerHTML = fill(esc(T.cita.listo), { enlace: `<a href="${esc(url)}"${blank}>${esc(T.cita.listoEnlace)}</a>` });
+  }
+
+  /* ---------- Cabecera del documento: título, SEO y schema.org ---------- */
+  function actualizarHead() {
+    document.documentElement.lang = lang;
+    document.title = tr(C.seo.titulo);
+    document.querySelector('meta[name="description"]').content = tr(C.seo.descripcion);
+
+    // Las demos no se indexan en Google; un sitio real (sin franja) sí.
+    let robots = document.querySelector('meta[name="robots"]');
+    if (C.showDemoBanner && !robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      robots.content = "noindex";
+      document.head.appendChild(robots);
+    }
+
+    const U = C.ubicacion, D = C.doctor;
+    const diasEn = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const nombresIdioma = { es: "Spanish", en: "English" };
+    const datos = {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      name: C.negocio.nombre,
+      description: tr(C.seo.descripcion),
+      url: C.seo.url || location.origin + location.pathname,
+      image: C.seo.imagen || foto(C.hero.imagen, 1200),
+      logo: C.negocio.logo ? new URL(C.negocio.logo, location.href).href : undefined,
+      telephone: C.contacto.telefono,
+      email: C.contacto.correo || undefined,
+      priceRange: C.negocio.rangoPrecios,
+      currenciesAccepted: C.moneda,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: U.calle,
+        addressLocality: U.ciudad,
+        addressRegion: U.estado,
+        postalCode: U.codigoPostal,
+        addressCountry: U.pais,
+      },
+      hasMap: U.mapsLink || undefined,
+      openingHoursSpecification: (C.horario || []).flatMap((h) => h.horas.map(([abre, cierra]) => ({
+        "@type": "OpeningHoursSpecification", dayOfWeek: h.dias.map((d) => diasEn[d]), opens: abre, closes: cierra,
+      }))),
+      availableLanguage: IDIOMAS.map((l) => nombresIdioma[l] || l),
+      sameAs: Object.values(C.redes || {}).filter(Boolean),
+      employee: { "@type": "Person", name: D.nombre, jobTitle: tr(D.titulo, IDIOMAS[0]), image: D.foto ? foto(D.foto, 800) : undefined },
+      makesOffer: C.servicios.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: tr(s.nombre), description: tr(s.descripcion) },
+        priceSpecification: s.precio ? { "@type": "PriceSpecification", minPrice: s.precio, priceCurrency: C.moneda } : undefined,
+      })),
+    };
+    let ld = document.getElementById("schema");
+    if (!ld) {
+      ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.id = "schema";
+      document.head.appendChild(ld);
+    }
+    ld.textContent = JSON.stringify(datos).replace(/</g, "\\u003c");
+  }
+
+  // Avisa en la consola si el bloque "VISTA PREVIA" del <head> no coincide con CONFIG.seo.
+  function revisarVistaPrevia() {
+    const l0 = IDIOMAS[0];
+    const og = (p) => (document.querySelector(`meta[property="og:${p}"]`) || {}).content || "";
+    const titulo = tr(C.seo.titulo, l0), desc = tr(C.seo.descripcion, l0), img = C.seo.imagen || "", url = C.seo.url || "";
+    const html = (document.querySelector("title") || {}).textContent || "";
+    const meta = (document.querySelector('meta[name="description"]') || {}).content || "";
+    if (html === titulo && meta === desc && og("title") === titulo && og("description") === desc &&
+        og("image") === img && og("url") === url) return;
+    const a = (s) => esc(s);
+    console.warn(
+      "La vista previa de WhatsApp no coincide con CONFIG.seo. Reemplaza el bloque VISTA PREVIA del <head> por esto:\n\n" +
+      `<title>${a(titulo)}</title>\n<meta name="description" content="${a(desc)}">\n` +
+      `<meta property="og:title" content="${a(titulo)}">\n<meta property="og:description" content="${a(desc)}">\n` +
+      (url ? `<meta property="og:url" content="${a(url)}">\n` : "") +
+      `<meta property="og:image" content="${a(img)}">`
+    );
+  }
+
+  /* ---------- Animación al hacer scroll ---------- */
+  let observador = null;
+  function activarReveal() {
+    const items = app.querySelectorAll(".reveal");
+    if (!primeraVez || reduceMotion || !("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("in"));
+      return;
+    }
+    document.documentElement.classList.add("anim");
+    observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((en) => {
+        if (en.isIntersecting) { en.target.classList.add("in"); observador.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    items.forEach((el) => observador.observe(el));
+  }
+
+  /* ---------- Render ---------- */
+  function render() {
+    const datosForm = leerForm();
+    T = C.textos[lang];
+    if (observador) observador.disconnect();
+    app.innerHTML = [
+      `<a class="skip" href="#contenido">${esc(T.saltar)}</a>`,
+      franjaDemo(),
+      encabezado(),
+      `<main id="contenido" tabindex="-1">`,
+      portada(), servicios(), doctora(), agenda(), opiniones(), preguntas(), ubicacion(),
+      `</main>`,
+      pie(),
+      flotante(),
+    ].join("");
+    escribirForm(datosForm);
+    actualizarHead();
+    activarReveal();
+    primeraVez = false;
+  }
+
+  /* ---------- Eventos (delegados: sobreviven al cambio de idioma) ---------- */
+  app.addEventListener("click", (e) => {
+    const btnIdioma = e.target.closest(".lang-btn");
+    if (btnIdioma && btnIdioma.dataset.lang !== lang) {
+      lang = btnIdioma.dataset.lang;
+      try { localStorage.setItem("idioma:" + C.negocio.nombre, lang); } catch (err) { /* sin almacenamiento */ }
+      render();
+      app.querySelector(`.lang-btn[data-lang="${lang}"]`).focus();
+      return;
+    }
+    const enlaceServicio = e.target.closest("[data-servicio]");
+    if (enlaceServicio) {
+      e.preventDefault();
+      const sel = document.getElementById("f-servicio");
+      sel.value = enlaceServicio.dataset.servicio;
+      ponerError(form(), "servicio", "");
+      document.getElementById("cita").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+      sel.focus({ preventScroll: true });
+    }
+  });
+  app.addEventListener("change", (e) => {
+    const f = form();
+    if (!f || !f.contains(e.target)) return;
+    if (e.target.name === "fecha") {
+      document.getElementById("horas").innerHTML = htmlHoras(e.target.value);
+      ponerError(f, "hora", "");
+    }
+    if (f.querySelector(`[data-campo="${e.target.name}"]`)) ponerError(f, e.target.name, "");
+  });
+  app.addEventListener("input", (e) => {
+    const f = form();
+    if (f && f.contains(e.target) && f.querySelector(`[data-campo="${e.target.name}"].has-error`)) ponerError(f, e.target.name, "");
+  });
+  app.addEventListener("submit", (e) => { if (e.target.id === "form-cita") enviar(e); });
+
+  aplicarColores();
+  revisarVistaPrevia();
+  render();
+})();
+</script>
+</body>
+</html>
